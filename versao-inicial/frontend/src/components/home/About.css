@@ -1,0 +1,22 @@
+.text h1 {
+  text-align: center;
+  font-size: 3rem;
+  padding-top: 50px;
+}
+
+.about-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  padding: 20px;
+}
+
+@media screen and (max-width: 480px) {
+  .about-box {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+  }
+}
