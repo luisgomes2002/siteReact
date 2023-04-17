@@ -8,17 +8,17 @@ import Card from 'react-bootstrap/Card';
 
 function Home() {
   return (
-    <div className='hero' id='home'>
-      <div className='hero-container'>
+    <div className='home' id='home'>
+      <div className='home-container'>
 
         {/* Navbar Section */}
         <NavBar />
 
-        {/* <Hero Section */}
-        <div className='hero-imag'>
-          <h1 className='hero-heading'>Gosta da Cultura Japonesa?</h1>
-          <p className='hero-description'>Qual é o seu interesse?</p>
-          <button className='hero-btn'><Link to='/'>Explore</Link></button>
+        {/* <home Section */}
+        <div className='home-imag'>
+          <h1 className='home-heading'>Gosta da Cultura Japonesa?</h1>
+          <p className='home-description'>Qual é o seu interesse?</p>
+          <button className='home-btn'><Link to='/'>Explore</Link></button>
           {/* Criar um pagina com todos os serviços */}
         </div>
 

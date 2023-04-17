@@ -1,0 +1,54 @@
+.nav-link {
+  --bs-nav-link-color: #000;
+  --bs-nav-link-hover-color: #000;
+}
+
+.hero-japanese {
+  background: linear-gradient(to right, #161616, #000000);
+  background-image: url("../../../assets/baka/background2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  height: 90%;
+  text-align: center;
+}
+
+.hero-imag {
+  margin-bottom: 70px;
+  padding: 40px;
+}
+
+.hero-heading {
+  margin-top: 20%;
+  font-size: 50px;
+  color: #fff;
+}
+
+.hero-description {
+  font-size: 30px;
+  margin-bottom: 2%;
+  color: #fff;
+  margin-bottom: 5%;
+}
+
+.highlight {
+  border-bottom: 4px solid #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-heading {
+    margin-top: 40%;
+    font-size: 40px;
+  }
+
+  .hero-description {
+    font-size: 20px;
+  }
+}

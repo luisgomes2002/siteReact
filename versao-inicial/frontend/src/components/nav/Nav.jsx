@@ -19,7 +19,7 @@ function NavBar() {
           <li className='navbar-item'>
             <Link to='/categorias' className='navbar-links--categorias' id='categories-page'>CATEGORIAS</Link>
             <div className='categorias-dropdown-content'>
-              <NavDropdown.Item> APRENDER </NavDropdown.Item>
+              <NavDropdown.Item><Link to='/japanese'>APRENDER</Link></NavDropdown.Item>
               <NavDropdown.Item> MORAR </NavDropdown.Item>
               <NavDropdown.Item> VIAJAR </NavDropdown.Item>
               <NavDropdown.Item> MAIS </NavDropdown.Item>

@@ -1,0 +1,54 @@
+.main {
+  background-color: #0c0c0c;
+  padding: 3rem 0;
+}
+
+.main-container {
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  height: 90%;
+  z-index: 1;
+  width: 100%;
+  max-width: 1600px;
+  padding: 50px;
+}
+
+.main-content {
+  color: #fff;
+  width: 100%;
+}
+
+.main-container h1 {
+  font-size: 3rem;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+.main-container p {
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 480px) {
+  .main-content h1 {
+    font-size: 2rem;
+    margin-top: 3rem;
+  }
+
+  .main-content h2 {
+    font-size: 3rem;
+  }
+
+  .main-container p {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .main-btn {
+    padding: 12px 36px;
+    margin: 2.5rem 0;
+  }
+}

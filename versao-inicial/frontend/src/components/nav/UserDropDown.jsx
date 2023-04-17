@@ -9,7 +9,7 @@ function UserDropDown() {
     <li className='navbar-icon'>
       <Link to='/login' className='navbar-links--icon' id='singup'><i className='fa-regular fa-user'></i></Link>
       <div className='user-dropdown-content'>
-        <NavDropdown.Item><i className='fa-solid fa-lock'></i> PERFIL </NavDropdown.Item>
+        <NavDropdown.Item><i className='fa-solid fa-lock'></i> PERFIL</NavDropdown.Item>
         <NavDropdown.Item><i className='fa fa-sign-out'></i> SAIR</NavDropdown.Item>
       </div>
     </li>
