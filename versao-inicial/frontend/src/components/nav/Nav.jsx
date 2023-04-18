@@ -20,9 +20,9 @@ function NavBar() {
             <Link to='/categorias' className='navbar-links--categorias' id='categories-page'>CATEGORIAS</Link>
             <div className='categorias-dropdown-content'>
               <NavDropdown.Item><Link to='/japanese'>APRENDER</Link></NavDropdown.Item>
-              <NavDropdown.Item> MORAR </NavDropdown.Item>
-              <NavDropdown.Item> VIAJAR </NavDropdown.Item>
-              <NavDropdown.Item> MAIS </NavDropdown.Item>
+              <NavDropdown.Item><Link to='/'> MORAR</Link> </NavDropdown.Item>
+              <NavDropdown.Item><Link to='/'> VIAJAR</Link> </NavDropdown.Item>
+              <NavDropdown.Item><Link to='/'> MAIS </Link></NavDropdown.Item>
             </div>
           </li>
           <li className='navbar-item'>

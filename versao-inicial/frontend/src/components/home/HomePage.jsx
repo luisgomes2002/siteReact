@@ -29,42 +29,42 @@ function Home() {
 
 function Services() {
   return (
-    <div className='services' id='services'>
-      <div className='services-wrapper'>
-        <div className='services-card'>
-          <div className='services-btns'>
+    <div className='categorias' id='categorias'>
+      <div className='categorias-wrapper'>
+        <div className='categorias-card'>
+          <div className='categorias-btns'>
             <Link to='/japanese'>
               <span className='span-btns'>MOSTRE MAIS</span>
               <span className='span-card'><h3>APRENDA JAPONÊS</h3></span>
             </Link>
           </div>
         </div>
-        <div className='services-card1'>
-          <div className='services-btns'>
+        <div className='categorias-card1'>
+          <div className='categorias-btns'>
             <Link to='/'>
               <span className='span-btns'>MOSTRE MAIS</span>
               <span className='span-card'><h3>MORE NO JAPÃO</h3></span>
             </Link>
           </div>
         </div>
-        <div className='services-card2'>
-          <div className='services-btns'>
+        <div className='categorias-card2'>
+          <div className='categorias-btns'>
             <Link to='/'>
               <span className='span-btns'>MOSTRE MAIS</span>
               <span className='span-card'><h3>VIAJE PARA O JAPÃO</h3></span>
             </Link>
           </div>
         </div>
-        <div className='services-card3'>
-          <div className='services-btns'>
+        <div className='categorias-card3'>
+          <div className='categorias-btns'>
             <Link to='/'>
               <span className='span-btns'>MOSTRE MAIS</span>
               <span className='span-card'><h3>VEJA MAIS</h3></span>
             </Link>
           </div>
         </div>
-        <div className='services-card4'>
-          <div className='services-btns'>
+        <div className='categorias-card4'>
+          <div className='categorias-btns'>
             <Link to='/'>
               <span className='span-btns'>MOSTRE MAIS</span>
               <span className='span-card'><h3>COMPARTILHE</h3></span>

@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import './Jlpt.css'
 import Table from 'react-bootstrap/Table';
 import { Link } from 'react-router-dom';
+import { VideoList } from '../../videos/LoopVideo/Loop';
+
 
 function TableJplt() {
   return (
@@ -63,60 +65,13 @@ function JlptHome() {
   )
 }
 
-function Videos() {
-  return (
-    <div className='video-container'>
-      <div className='video-space'>
-        <iframe
-          src='https://www.youtube.com/embed/iaOElfrWIo8'
-          title='Tudo que você precisa saber sobre o JLPT!'
-          width='95%'
-          height='80%'
-        ></iframe>
-        <Link to='https://youtu.be/iaOElfrWIo8' target='_blank'>
-          <h3>Tudo que você precisa saber sobre o JLPT!
-            <br />
-            <p>Em Português</p>
-          </h3>
-        </Link>
-      </div>
-      <div className='video-space'>
-        <iframe
-          src='https://www.youtube.com/embed/sm5cnpDkhuY'
-          title='Learn Japanese｜Everything you need to know about JLPT｜How to Prepare for JLPT'
-          width='95%'
-          height='80%'
-        ></iframe>
-        <Link to='https://youtu.be/sm5cnpDkhuY' target='_blank'>
-          <h3>Learn Japanese｜Everything you need to know about JLPT｜How to Prepare for JLPT<br />
-            <p>Em Inglês e Japonês</p>
-          </h3>
-        </Link>
-      </div>
-      <div className='video-space'>
-        <iframe
-          src='https://www.youtube.com/embed/8jW7YAcwbl0'
-          title='【日本語教師になるための試験】日本語教育能力検定試験について'
-          width='95%'
-          height='80%'
-        ></iframe>
-        <Link to='https://youtu.be/8jW7YAcwbl0' target='_blank' >
-          <h3>【日本語教師になるための試験】日本語教育能力検定試験について
-            <p>Em Japonês</p>
-          </h3>
-        </Link>
-      </div>
-    </div>
-  )
-}
-
 function Jlpt() {
   return (
-    <>
+    <Fragment>
       <JlptHome />
       <TableJplt />
-      <Videos />
-    </>
+      <VideoList />
+    </Fragment>
   )
 }
 
