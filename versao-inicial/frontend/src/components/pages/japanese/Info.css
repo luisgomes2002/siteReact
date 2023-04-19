@@ -1,6 +1,6 @@
 .main {
   background-color: #0c0c0c;
-  padding: 3rem 0;
+  padding: 2rem 0;
 }
 
 .main-container {
@@ -30,6 +30,20 @@
   margin-top: 1rem;
   font-size: 2rem;
   font-weight: 700;
+}
+
+.bread-itens-info {
+  background-color: #0c0c0c;
+  padding-left: 40px;
+}
+
+.bread-itens-info a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.bread-itens-info a:hover {
+  color: #fff;
 }
 
 @media screen and (max-width: 480px) {

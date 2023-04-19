@@ -1,6 +1,7 @@
-import { Component } from "react";
-import { videoAbout } from "../JlptVideosEx";
+import { Component } from 'react';
+import { videoAbout } from '../JlptVideosEx';
 import { Link } from 'react-router-dom';
+import './Loop.css'
 
 class Loop extends Component {
   render() {

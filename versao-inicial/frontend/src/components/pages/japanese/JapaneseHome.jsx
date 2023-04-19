@@ -1,40 +1,12 @@
 import React from 'react'
 import './JapaneseHome.css'
 import './Info.css'
-import Jlpt from './jlpt/Jlpt'
 import './Alfabeto.css'
 import './Dicas.css'
 import './Cursos.css'
 import NavBar from '../../nav/Nav'
 import { Link } from 'react-router-dom'
-import Tab from 'react-bootstrap/Tab';
-import Tabs from 'react-bootstrap/Tabs';
-
-
-function TabsJlpt() {
-  return (
-    <Tabs
-      defaultActiveKey="JLPT"
-      id="fill-tab-example"
-      className="mt-4"
-      fill
-      style={{ color: '#000' }}
-    >
-      <Tab eventKey="JLPT" title="JLPT">
-        <Jlpt />
-      </Tab>
-      <Tab eventKey="ALFABETO" title="ALFABETO">
-        <Alfabeto />
-      </Tab>
-      <Tab eventKey="DICAS" title="DICAS">
-        <Dicas />
-      </Tab>
-      <Tab eventKey="CURSOS" title="CURSOS" >
-        <Cursos />
-      </Tab>
-    </Tabs>
-  );
-}
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
 
 function Home() {
   return (
@@ -51,6 +23,10 @@ function Home() {
 function Info() {
   return (
     <div className='main' id='about'>
+      <Breadcrumb className='bread-itens-info'>
+        <Breadcrumb.Item ><Link to='/'><i class="fa-solid fa-house"></i></Link></Breadcrumb.Item>
+        <Breadcrumb.Item >Aprender Japonês</Breadcrumb.Item>
+      </Breadcrumb>
       <div className='main-container'>
         <div className='main-content'>
           <h1>Um pouco sobre</h1>
@@ -60,6 +36,48 @@ function Info() {
         </div>
       </div>
     </div>
+  )
+}
+
+function TabsJlpt() {
+  return (
+    <div className='title'>
+      <h2>CRIAR TITULO</h2>
+      <div className="tabs-container">
+        <div className="tabs-wrapper">
+          <Link to="/jlpt" className="box-items">
+
+          </Link>
+          <Link to="/jlpt" className="box-items" >
+            <h1>JAPONÊS</h1>
+          </Link>
+          <Link to="/jlpt" className="box-items" >
+            <h1>DICAS</h1>
+          </Link>
+          <Link to="/jlpt" className="box-items" >
+            <h1>CURSOS</h1>
+          </Link>
+        </div >
+      </div >
+      <div className="tabs">
+        <div className="tabs-wrap">
+          <p to="/jlpt" className="box-text" >
+            Entenda um pouco mais sobre o JLPT, onde fazer a prova,
+            como, quanto custa e quanto o valor de incrição de cada nível.
+          </p>
+          <p to="/jlpt" className="box-text" >
+            ola
+          </p>
+          <p to="/jlpt" className="box-text" >
+            ola
+          </p>
+          <p to="/jlpt" className="box-text" >
+            ola
+          </p>
+
+        </div >
+      </div >
+    </div >
   )
 }
 

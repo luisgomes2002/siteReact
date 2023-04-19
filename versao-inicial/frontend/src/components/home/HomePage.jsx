@@ -29,8 +29,9 @@ function Home() {
 
 function Services() {
   return (
-    <div className='categorias' id='categorias'>
+    <div className='categorias' id='categorias' >
       <div className='categorias-wrapper'>
+
         <div className='categorias-card'>
           <div className='categorias-btns'>
             <Link to='/japanese'>
