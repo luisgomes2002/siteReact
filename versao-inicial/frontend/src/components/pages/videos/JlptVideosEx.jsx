@@ -1,6 +1,8 @@
 import JLPTpt from '../../../assets/youtubeThumb/JLPTpt.jpg'
 import JLPTen from '../../../assets/youtubeThumb/JLPTen.jpg'
 import JLPTjp from '../../../assets/youtubeThumb/JLPTjp.jpg'
+import JLPTpt2 from '../../../assets/youtubeThumb/JLPTpt2.jpg'
+import JLPTpt3 from '../../../assets/youtubeThumb/JLPTpt3.jpg'
 
 export const videoAbout = [
   {
@@ -22,5 +24,19 @@ export const videoAbout = [
     title: '【日本語教師になるための試験】日本語教育能力検定試験について',
     description: 'Em Japonês',
     imagem: JLPTjp
+  },
+
+  {
+    videoUrl: 'https://youtu.be/5IIqbfO0oVo',
+    title: 'INSCRIÇÃO JLPT - COMO FAZER?',
+    description: 'Em Portugês',
+    imagem: JLPTpt2
+  },
+
+  {
+    videoUrl: 'https://www.youtube.com/watch?v=oqdoj3xACdw',
+    title: 'Tudo sobre o JLPT no Japão!',
+    description: 'Em Portugês',
+    imagem: JLPTpt3
   },
 ]

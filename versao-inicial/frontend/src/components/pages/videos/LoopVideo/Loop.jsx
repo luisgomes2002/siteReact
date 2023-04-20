@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import { Scrollbars } from 'react-custom-scrollbars-2'
 import { videoAbout } from '../JlptVideosEx';
 import { Link } from 'react-router-dom';
 import './Loop.css'
@@ -33,8 +34,12 @@ export const VideoList = ({ videos, emptyHeading }) => {
     <section>
       <div className='video-container'>
         <h2>{heading}</h2>
-        <Loop />
+        <Scrollbars style={{ height: 450 }}>
+          <Loop />
+        </Scrollbars>
+
       </div>
     </section>
   );
 }
+

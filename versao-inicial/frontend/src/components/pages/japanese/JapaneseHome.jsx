@@ -24,7 +24,7 @@ function Info() {
   return (
     <div className='main' id='about'>
       <Breadcrumb className='bread-itens-info'>
-        <Breadcrumb.Item ><Link to='/'><i class="fa-solid fa-house"></i></Link></Breadcrumb.Item>
+        <Breadcrumb.Item ><Link to='/'><i class='fa-solid fa-house'></i></Link></Breadcrumb.Item>
         <Breadcrumb.Item >Aprender Japonês</Breadcrumb.Item>
       </Breadcrumb>
       <div className='main-container'>
@@ -43,35 +43,35 @@ function TabsJlpt() {
   return (
     <div className='title'>
       <h2>CRIAR TITULO</h2>
-      <div className="tabs-container">
-        <div className="tabs-wrapper">
-          <Link to="/jlpt" className="box-items">
-
+      <div className='tabs-container'>
+        <div className='tabs-wrapper'>
+          <Link to='/jlpt' className='box-items'>
+            <h1>JLPT</h1>
           </Link>
-          <Link to="/jlpt" className="box-items" >
+          <Link to='/jlpt' className='box-items' >
             <h1>JAPONÊS</h1>
           </Link>
-          <Link to="/jlpt" className="box-items" >
+          <Link to='/jlpt' className='box-items' >
             <h1>DICAS</h1>
           </Link>
-          <Link to="/jlpt" className="box-items" >
+          <Link to='/jlpt' className='box-items' >
             <h1>CURSOS</h1>
           </Link>
         </div >
       </div >
-      <div className="tabs">
-        <div className="tabs-wrap">
-          <p to="/jlpt" className="box-text" >
+      <div className='tabs'>
+        <div className='tabs-wrap'>
+          <p to='/jlpt' className='box-text' >
             Entenda um pouco mais sobre o JLPT, onde fazer a prova,
-            como, quanto custa e quanto o valor de incrição de cada nível.
+            como e quanto o valor de incrição de cada nível.
           </p>
-          <p to="/jlpt" className="box-text" >
+          <p to='/jlpt' className='box-text' >
             ola
           </p>
-          <p to="/jlpt" className="box-text" >
+          <p to='/jlpt' className='box-text' >
             ola
           </p>
-          <p to="/jlpt" className="box-text" >
+          <p to='/jlpt' className='box-text' >
             ola
           </p>
 
@@ -80,6 +80,7 @@ function TabsJlpt() {
     </div >
   )
 }
+
 
 function JapaneseHome() {
   return (
@@ -93,12 +94,12 @@ function JapaneseHome() {
 
 function Alfabeto() {
   return (
-    <div className="hiragana" id="alfabeto">
-      <div className="hiragana-container">
-        <div className="hiragana-contentabout">
-          <div className="hiragana-wrapper">
-            <div className="card2">
-              <div className="services-btn"><Link to="/"> <button>Aprender</button></Link></div>
+    <div className='hiragana' id='alfabeto'>
+      <div className='hiragana-container'>
+        <div className='hiragana-contentabout'>
+          <div className='hiragana-wrapper'>
+            <div className='card2'>
+              <div className='services-btn'><Link to='/'> <button>Aprender</button></Link></div>
             </div>
             <h1>Alfabetos<p>Falar um pouco do ALFABETO</p></h1>
           </div>
@@ -110,13 +111,13 @@ function Alfabeto() {
 
 function Dicas() {
   return (
-    <div className="dicas" id="tips">
-      <div className="dicas-container">
-        <div className="dicas-contentabout">
-          <div className="dicas-wrapper">
+    <div className='dicas' id='tips'>
+      <div className='dicas-container'>
+        <div className='dicas-contentabout'>
+          <div className='dicas-wrapper'>
             <h1>Dicas<p>Falar um pouco das Dicas</p></h1>
-            <div className="card3">
-              <div className="services-btn"><Link to="/"><button>Aprender</button></Link></div>
+            <div className='card3'>
+              <div className='services-btn'><Link to='/'><button>Aprender</button></Link></div>
             </div>
           </div>
         </div>
@@ -127,13 +128,13 @@ function Dicas() {
 
 function Cursos() {
   return (
-    <div className="hiragana" id="alfabeto">
-      <div className="hiragana-container">
-        <div className="hiragana-contentabout">
-          <div className="hiragana-wrapper">
+    <div className='hiragana' id='alfabeto'>
+      <div className='hiragana-container'>
+        <div className='hiragana-contentabout'>
+          <div className='hiragana-wrapper'>
             <h1>Cursos<p>Falar um pouco das Cursos </p></h1>
-            <div className="card5">
-              <div className="services-btn"><Link to="/"><button>Aprender</button></Link></div>
+            <div className='card5'>
+              <div className='services-btn'><Link to='/'><button>Aprender</button></Link></div>
             </div>
           </div>
         </div>

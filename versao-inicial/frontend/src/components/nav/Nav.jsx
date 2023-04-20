@@ -29,7 +29,8 @@ function NavBar() {
             <Link to='/sobre' className='navbar-links--sobre' id='about-page'>SOBRE</Link>
           </li>
           <li className='navbar-item'>
-            <Link to='/compartilhe' className='navbar-links--compartilhe' id='share-page'>COMPARTILHE</Link>
+            {/* <Link to='/compartilhe' className='navbar-links--compartilhe' id='share-page'>COMPARTILHE</Link> */}
+            <h1 className='navbar-links--disable' >COMPARTILHE</h1>
           </li>
           <UserDropDown />
         </ul>

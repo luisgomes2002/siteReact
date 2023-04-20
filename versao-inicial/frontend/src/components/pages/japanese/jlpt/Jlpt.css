@@ -1,9 +1,9 @@
 nav {
-  background-color: #212529;
+  background-color: #131313;
 }
 
 .bread-itens-jlpt {
-  padding: 40px 0 10px 40px;
+  padding: 35px 0 10px 40px;
 }
 
 .bread-itens-jlpt a {
@@ -16,13 +16,113 @@ nav {
 }
 
 .jlpt-home {
-  padding: 30px;
+  padding: 50px 100px;
+  margin: 0 200px 0 200px;
 }
 
-.jlpt-home h1 {
+.jlpt-btn-categories {
+  text-align: center;
+  padding: 20px;
+}
+
+.jlpt-btn-categories a {
+  padding: 20px;
+}
+
+.jlpt-btn-categories Button {
+  padding: 15px;
+  font-size: 20px;
+}
+
+.jlpt-home-img {
   font-size: 4rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  color: #fff;
+  background-image: url('../../../../assets/baka/background2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 250px;
+}
+
+.jlpt-home-img h1 {
+  font-size: 4rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+}
+
+.jlpt-home h2 {
+  color: #000000;
+  font-size: 40px;
+  padding-bottom: 10px;
+}
+
+.jlpt-home p {
+  color: #000000;
+  font-size: 20px;
+}
+
+.jlpt-home a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.jlpt-home a:hover {
+  color: #535050;
 }
 
 .table-jlpt {
-  padding: 30px 100px 30px 100px;
+  padding: 0 300px 30px 300px;
+}
+
+.jlptlist-content {
+  background-color: #212529;
+  color: #fff;
+  height: 800px;
+}
+
+.jlpt-list-title {
+  text-align: center;
+  padding: 40px;
+
+}
+
+.value-tab {
+  text-align: center;
+  font-size: 20px;
+}
+
+.value-tab p {
+  padding-top: 40px;
+  font-size: 25px;
+}
+
+.local-tab {
+  text-align: center;
+  font-size: 20px;
+}
+
+.local-tab p {
+  padding-top: 40px;
+  font-size: 25px;
+}
+
+.local-tab a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.local-tab a:hover {
+  color: #535050;
+}
+
+.info-video {
+  font-size: 35px;
+  text-align: center;
+  padding: 20px;
 }

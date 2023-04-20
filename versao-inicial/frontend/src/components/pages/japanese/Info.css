@@ -35,6 +35,7 @@
 .bread-itens-info {
   background-color: #0c0c0c;
   padding-left: 40px;
+  background-image: none;
 }
 
 .bread-itens-info a {
