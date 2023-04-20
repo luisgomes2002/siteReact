@@ -42,7 +42,7 @@ function Info() {
 function TabsJlpt() {
   return (
     <div className='title'>
-      <h2>CRIAR TITULO</h2>
+      <h2>CATEGORIAS</h2>
       <div className='tabs-container'>
         <div className='tabs-wrapper'>
           <Link to='/jlpt' className='box-items'>
@@ -66,13 +66,16 @@ function TabsJlpt() {
             como e quanto o valor de incrição de cada nível.
           </p>
           <p to='/jlpt' className='box-text' >
-            ola
+            Essa seção é um guia dos assutos do N5 até o N1 com explicações
+            do tema e um vídeo para complementar o aprendizado.
           </p>
           <p to='/jlpt' className='box-text' >
-            ola
+            Aqui você encontrar dicas como extensões do navegador, apps e sites para facilitar
+            e impulsionar seus estudos.
           </p>
           <p to='/jlpt' className='box-text' >
-            ola
+            Quer uma ajuda nos estudos, encontrar materiais de japonês com mais facilidade e tem
+            uma grana sobrando? então clique aqui.
           </p>
 
         </div >
