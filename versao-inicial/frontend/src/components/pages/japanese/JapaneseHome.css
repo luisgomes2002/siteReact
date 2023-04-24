@@ -57,7 +57,7 @@
 .box-items {
   margin: 10px;
   height: 200px;
-  width: 360px;
+  width: 350px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -67,11 +67,15 @@
   text-align: center;
   text-decoration: none;
   border-radius: 10px;
-  /* background-image: url('../../../assets/outros/JLPTlogo.png'); */
+  background-image: url('../../../assets/JLPT/jlptN1.jpg');
 }
 
-.box-items h1 {
+.tabs-wrapper h1 {
   font-size: 30px;
+  color: #fff;
+  background-color: #00000042;
+  height: 70px;
+  padding-top: 15px;
 }
 
 .box-items:hover {
@@ -102,7 +106,6 @@
   background-size: cover;
   font-size: 1.1rem;
 }
-
 
 @media screen and (max-width: 768px) {
   .hero-heading {

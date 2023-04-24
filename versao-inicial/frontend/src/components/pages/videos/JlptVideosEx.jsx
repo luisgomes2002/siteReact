@@ -3,6 +3,7 @@ import JLPTen from '../../../assets/youtubeThumb/JLPTen.jpg'
 import JLPTjp from '../../../assets/youtubeThumb/JLPTjp.jpg'
 import JLPTpt2 from '../../../assets/youtubeThumb/JLPTpt2.jpg'
 import JLPTpt3 from '../../../assets/youtubeThumb/JLPTpt3.jpg'
+import JLPTjp2 from '../../../assets/youtubeThumb/JLPTjp2.jpg'
 
 export const videoAbout = [
   {
@@ -38,5 +39,12 @@ export const videoAbout = [
     title: 'Tudo sobre o JLPT no Japão!',
     description: 'Em Portugês',
     imagem: JLPTpt3
+  },
+
+  {
+    videoUrl: 'https://youtu.be/VBQSbKnuXQ4',
+    title: 'How did you pass JLPT N1?',
+    description: 'Em Inglês e Japonês',
+    imagem: JLPTjp2
   },
 ]
