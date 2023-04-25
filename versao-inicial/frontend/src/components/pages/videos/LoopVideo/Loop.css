@@ -1,11 +1,13 @@
 .video-container {
   border: solid 2px #fff;
-  background-color: #2c3034;
+  background-color: #fff;
   border-radius: 20px;
   margin: 30px 40px 0 0px;
   align-items: center;
   justify-items: center;
   padding: 50px 20px 50px 20px;
+  width: 950px;
+  box-shadow: 0 0 1rem #c2cbd0;
 }
 
 .video-container h2 {
@@ -15,9 +17,9 @@
 }
 
 .video-space {
-  border: solid 2px #fff;
+  border: solid 2px #26282c;
   border-radius: 20px;
-  margin: 0 30px 20px 30px;
+  margin: 20px 30px 20px 30px;
   display: grid;
   grid-template-columns: 25% 1fr;
   transition: 0.3s ease-in;
@@ -25,7 +27,8 @@
   justify-content: center;
   height: 125px;
   padding: 10px;
-  background-color: #fff;
+  background-color: #26282c;
+  box-shadow: 0 0 0.5rem #26282c;
 }
 
 .video-space a {
@@ -40,12 +43,16 @@
 
 .video-space h3 {
   font-size: 1.5rem;
-  color: #000;
+  color: #ffffff;
 }
 
 .video-space p {
   font-size: 0.8rem;
-  color: #000;
+  color: #ffffff;
+}
+
+.video-container h2 {
+  color: black;
 }
 
 .video-space:hover {

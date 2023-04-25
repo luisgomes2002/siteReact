@@ -2,6 +2,12 @@ nav {
   background-color: #131313;
 }
 
+.jlpt-logo {
+  text-align: center;
+  padding: 20px;
+  background-color: #00000005;
+}
+
 .bread-itens-jlpt {
   padding: 35px 0 10px 40px;
 }
@@ -22,6 +28,12 @@ nav {
   padding-bottom: 70px;
 }
 
+.background h1 {
+  font-family: 'Murecho', sans-serif;
+  color: #444343;
+  text-align: center;
+}
+
 .config-text h3 {
   padding-top: 40px;
   font-size: 25px;
@@ -33,6 +45,7 @@ nav {
 .config-text a {
   text-decoration: none;
   color: #535050;
+  font-size: 20px;
 }
 
 .config-text a:hover {
@@ -40,7 +53,7 @@ nav {
 }
 
 .jlpt-home {
-  padding: 100px 100px;
+  padding: 80px 100px;
   margin: 0 100px 0 100px;
   display: grid;
   grid-template-columns: 60% 1fr;
@@ -50,49 +63,10 @@ nav {
   margin-top: 30px;
 }
 
-.jlpt-btn-categories {
-  text-align: center;
-  padding: 20px;
-}
-
-.jlpt-btn-categories a {
-  padding: 20px;
-}
-
-.jlpt-btn-categories Button {
-  padding: 15px;
-  font-size: 20px;
-}
-
-.jlpt-home-img {
-  font-size: 4rem;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  padding: 40px;
-  color: #fff;
-  background-color: #131313;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 185px;
-}
-
-.jlpt-home-img h1 {
-  font-size: 4rem;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-}
-
 .jlpt-home h2 {
   color: #000000;
   font-size: 40px;
   padding-bottom: 10px;
-}
-
-.jlpt-home p {
-  color: #000000;
-  font-size: 20px;
 }
 
 .p-center {
@@ -100,18 +74,23 @@ nav {
   margin-bottom: 50px;
 }
 
-.jlpt-home a {
-  color: #000000;
-  text-decoration: none;
-  font-size: 20px;
-}
-
-.jlpt-home a:hover {
-  color: #535050;
+.jlpt-about {
+  text-align: center;
+  margin: 0 300px 0 300px;
 }
 
 .table-jlpt {
-  padding: 0 300px 30px 300px;
+  padding: 40px 100px 30px 100px;
+}
+
+.table-jlpt h3 {
+  text-align: center;
+  margin: 0 200px 0 200px;
+}
+
+.link-consulado {
+  padding-top: 40px;
+  text-align: center;
 }
 
 .jlptlist-content {
@@ -129,6 +108,24 @@ nav {
   margin: 0 300px 0 300px;
 }
 
+.center-items p {
+  font-size: 10px;
+  color: #535050;
+}
+
+.grid-img {
+  display: grid;
+  grid-template-columns: 40% 1fr;
+  align-items: center;
+  justify-items: center;
+  margin: 50px 120px 50px 280px;
+  text-align: center;
+}
+
+.grid-img h3 {
+  padding-bottom: 100px;
+}
+
 .tabs-config {
   font-size: 20px;
   padding: 2rem 2rem;
@@ -141,5 +138,7 @@ nav {
 }
 
 .video-gird {
-  margin: 100px 500px 0 500px;
+  margin-left: 480px;
+  align-items: center;
+  justify-items: center;
 }
