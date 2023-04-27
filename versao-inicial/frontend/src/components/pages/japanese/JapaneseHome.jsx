@@ -24,7 +24,7 @@ function Info() {
   return (
     <div className='main' id='about'>
       <Breadcrumb className='bread-itens-info'>
-        <Breadcrumb.Item ><Link to='/'><i class='fa-solid fa-house'></i></Link></Breadcrumb.Item>
+        <Breadcrumb.Item ><Link to='/'><i className='fa-solid fa-house'></i></Link></Breadcrumb.Item>
         <Breadcrumb.Item >Aprender Japonês</Breadcrumb.Item>
       </Breadcrumb>
       <div className='main-container'>
@@ -59,7 +59,7 @@ function TabsJlpt() {
           </Link>
         </div >
       </div >
-      <div className='tabs'>
+      {/* <div className='tabs'>
         <div className='tabs-wrap'>
           <p to='/jlpt' className='box-text' >
             Entenda um pouco mais sobre o JLPT, onde fazer a prova,
@@ -77,9 +77,8 @@ function TabsJlpt() {
             Quer uma ajuda nos estudos, encontrar materiais de japonês com mais facilidade e tem
             uma grana sobrando? então clique aqui.
           </p>
-
         </div >
-      </div >
+      </div > */}
     </div >
   )
 }

@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import './Jlpt.css'
 import NavBar from '../../../nav/Nav';
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
@@ -31,19 +31,19 @@ function JlptHome() {
               trabalho que envolve falar bastante com pessoas requer o N1. Nesse link você pode encontrar mais informações
               sobre <Link to='/trabalho' target='_blank'>TRABALHO NO JAPÃO.</Link></h3>
             <iframe width="559" height="310" src="https://www.youtube.com/embed/VBQSbKnuXQ4"
-              title="How did you pass JLPT N1?" frameborder="0"
+              title="How did you pass JLPT N1?" frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
+              allowFullScreen
             ></iframe>
           </div>
           <div className="center-items">
             <h1>Níveis do JLPT</h1>
             <div className="grid-img">
               <div>
-                <img src={japanCulture} alt="" style={{ width: 700, height: 470 }} />
+                <img src={japanCulture} alt="" />
                 <p className='p-center'>(imagem: Pixabay)</p>
               </div>
-              <div className='m-5'>
+              <div className='m-1'>
                 <h3>A prova é dividida em 5 níves de proficiência sendo o mais baixo o N5 e o mais alto o N1,
                   para pessoas interessadas em aprender o japonês para visitar o japão, com um N5 ou N4 já
                   consegue ter uma experiências mais confortável como ir ao restaurante, fazer check in no hotel e outras
@@ -74,10 +74,10 @@ function JlptHome() {
                 <thead>
                   <tr>
                     <th style={{ textAlign: 'center' }}>Nível</th>
-                    <th style={{ textAlign: 'center' }} >Pontuação Global</th>
+                    <th style={{ textAlign: 'center' }}>Pontuação Global</th>
                     <th style={{ textAlign: 'center' }} colSpan={3}>Pontuação de cada divisão </th>
-                    <th style={{ textAlign: 'center' }}>Conteúdo da prova</th>
-                    <th style={{ textAlign: 'center' }}>Tempo</th>
+                    {/* <th style={{ textAlign: 'center' }}>Conteúdo da prova</th>
+                    <th style={{ textAlign: 'center' }}>Tempo</th> */}
                   </tr>
                 </thead>
                 <tbody>
@@ -89,8 +89,8 @@ function JlptHome() {
                         de 38 pontos <br /> 0 a 60 pontos / nota de corte
                         de 19 pontos</b></td>
                     <td>Compreensão auditiva <br /> <b>0 a 60 pontos / nota de corte 19 pontos</b></td>
-                    <td>Vocabulário <br /> Gramática <br /> Leitura Compreensão Oral</td>
-                    <td>25 minutos <br /> 50 minutos <br /> 30 minutos</td>
+                    {/* <td>Vocabulário <br /> Gramática <br /> Leitura Compreensão Oral</td>
+                    <td>25 minutos <br /> 50 minutos <br /> 30 minutos</td> */}
                   </tr>
                   <tr>
                     <td><br />N4</td>
@@ -100,8 +100,8 @@ function JlptHome() {
                         de 38 pontos <br /> 0 a 60 pontos / nota de corte
                         de 19 pontos</b></td>
                     <td>Compreensão auditiva <br /> <b>0 a 60 pontos / nota de corte 19 pontos</b></td>
-                    <td>Vocabulário <br />Gramática <br /> Leitura Compreensão Oral</td>
-                    <td>30 minutos <br /> 60 minutos <br /> 35 minutos</td>
+                    {/* <td>Vocabulário <br />Gramática <br /> Leitura Compreensão Oral</td>
+                    <td>30 minutos <br /> 60 minutos <br /> 35 minutos</td> */}
                   </tr>
                   <tr>
                     <td><br />N3</td>
@@ -111,8 +111,8 @@ function JlptHome() {
                     <td>Compreensão do texto <br /> <b>0 a 60 pontos / nota de corte 19 pontos</b></td>
                     <td>Conhecimento
                       Compreensão auditiva <br /> <b>0 a 60 pontos / nota de corte 19 pontos</b></td>
-                    <td>Vocabulário <br />Gramática <br /> Leitura Compreensão Oral</td>
-                    <td>30 minutos <br /> 70 minutos <br /> 40 minutos</td>
+                    {/* <td>Vocabulário <br />Gramática <br /> Leitura Compreensão Oral</td>
+                    <td>30 minutos <br /> 70 minutos <br /> 40 minutos</td> */}
                   </tr>
                   <tr>
                     <td>N2</td>
@@ -122,8 +122,8 @@ function JlptHome() {
                     <td>Compreensão do texto <br /> <b>0 a 60 pontos / nota de corte 19 pontos</b></td>
                     <td>Conhecimento
                       Compreensão auditiva <br /> <b>0 a 60 pontos / nota de corte 19 pontos</b></td>
-                    <td>Vocabulário / Gramática e Leitura <br /> Compreensão Oral</td>
-                    <td>105 minutos <br /> 50 minutos</td>
+                    {/* <td>Vocabulário / Gramática e Leitura <br /> Compreensão Oral</td>
+                    <td>105 minutos <br /> 50 minutos</td> */}
                   </tr>
                   <tr>
                     <td>N1</td>
@@ -133,8 +133,8 @@ function JlptHome() {
                     <td>Compreensão do texto <br /> <b>0 a 60 pontos / nota de corte 19 pontos</b></td>
                     <td>Conhecimento
                       Compreensão auditiva <br /> <b>0 a 60 pontos / nota de corte 19 pontos</b></td>
-                    <td>Vocabulário / Gramática e Leitura <br /> Compreensão Oral</td>
-                    <td>110 minutos <br /> 60 minutos</td>
+                    {/* <td>Vocabulário / Gramática e Leitura <br /> Compreensão Oral</td>
+                    <td>110 minutos <br /> 60 minutos</td> */}
                   </tr>
                 </tbody>
               </Table>
@@ -152,8 +152,8 @@ function JlptHome() {
                   target='_blank'>SITE</Link>, poderá encontrar o local de realização da prova.
               </h3>
             </div>
-            <div className='grid-card'>
-              <div className='tabs-config' >
+            <div className='grid-card '>
+              <div className='tabs-config m-3' >
                 <h2>Valor</h2>
                 <p>Cada nível do JLPT tem o seu valor de inscrição
                   sendo eles respectivamente:
@@ -207,9 +207,9 @@ function JlptHome() {
 
 function Jlpt() {
   return (
-    <Fragment className='background-img'>
+    <div className='background-img'>
       <JlptHome />
-    </Fragment>
+    </div>
   )
 }
 

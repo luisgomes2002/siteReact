@@ -5,6 +5,7 @@ import JLPTpt2 from '../../../assets/youtubeThumb/JLPTpt2.jpg'
 import JLPTpt3 from '../../../assets/youtubeThumb/JLPTpt3.jpg'
 import JLPTjp2 from '../../../assets/youtubeThumb/JLPTjp2.jpg'
 
+
 export const videoAbout = [
   {
     videoUrl: 'https://youtu.be/iaOElfrWIo8',

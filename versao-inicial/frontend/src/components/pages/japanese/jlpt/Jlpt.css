@@ -57,6 +57,7 @@ nav {
   margin: 0 100px 0 100px;
   display: grid;
   grid-template-columns: 60% 1fr;
+  text-align: center;
 }
 
 .jlpt-home iframe {
@@ -123,6 +124,15 @@ nav {
 }
 
 .grid-img h3 {
+  padding: 30px;
+}
+
+.grid-img img {
+  width: 700px;
+  height: 470px;
+}
+
+.grid-img h3 {
   padding-bottom: 100px;
 }
 
@@ -138,7 +148,231 @@ nav {
 }
 
 .video-gird {
-  margin-left: 480px;
-  align-items: center;
-  justify-items: center;
+  width: 50%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1700px) {
+  .grid-img h3 {
+    padding: 0px 90px;
+  }
+
+  .grid-img {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    margin: 100px 0 0 0;
+    text-align: center;
+  }
+
+  .grid-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    padding-top: 50px;
+    margin: 0 100px 0 100px;
+  }
+
+  .video-gird {
+    width: 55%;
+    margin: 0 auto;
+  }
+
+}
+
+@media screen and (max-width: 1400px) {
+  .jlpt-home {
+    padding: 80px 30px;
+    margin: 0 100px 0 100px;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .jlpt-home iframe {
+    margin-top: 30px;
+    height: 500px;
+    align-items: center;
+    padding: 0 30px;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .grid-img {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    margin: 100px 0 0 0;
+    text-align: center;
+  }
+
+  .grid-img h3 {
+    padding: 20px;
+  }
+
+  .grid-img img {
+    width: 900px;
+    height: 540px;
+  }
+
+  .grid-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    padding-top: 50px;
+    margin: 0 0 0 0;
+  }
+
+  .tabs-config {
+    font-size: 20px;
+    padding: 2rem 2rem;
+    border: .5rem solid rgb(255, 255, 255);
+    box-shadow: 0 0 1rem #c2cbd0;
+    border-radius: 5px;
+    height: 350px;
+    width: 600px;
+    background-color: #fff;
+  }
+
+  .jlptlist-content {
+    color: #000000;
+    text-align: center;
+    margin: 150px 200px 0px 200px;
+  }
+
+  .jlpt-about {
+    text-align: center;
+    margin: 0 100px 0 100px;
+  }
+
+  .jlptlist-content {
+    color: #000000;
+    text-align: center;
+    margin: 150px 100px 0px 100px;
+  }
+
+  .background h3 {
+    font-size: 20px;
+  }
+
+  .video-gird {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .video-gird {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .jlpt-home iframe {
+    margin-top: 30px;
+    width: 600px;
+    height: 300px;
+    align-items: center;
+    padding: 0 30px;
+  }
+
+  .jlpt-home {
+    padding: 80px 0;
+    margin: 0 50px 0 50px;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .grid-img img {
+    width: 700px;
+    height: 430px;
+  }
+
+  .video-gird {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .video-space h3 {
+    font-size: .5rem;
+    color: #ffffff;
+  }
+
+  .table-jlpt {
+    padding: 40px 5px 30px 5px;
+  }
+
+}
+
+@media screen and (max-width: 767px) {
+  .jlpt-home iframe {
+    margin-top: 30px;
+    width: 400px;
+    height: 300px;
+    align-items: center;
+    padding: 0 30px;
+  }
+
+  .grid-img img {
+    width: 300px;
+    height: 200px;
+  }
+
+  .jlpt-about {
+    text-align: center;
+    margin: 0 50px 0 50px;
+  }
+
+  .table-jlpt h3 {
+    text-align: center;
+    margin: 0 50px 0 50px;
+  }
+
+  .jlptlist-content {
+    margin: 0px 50px 0px 50px;
+  }
+
+  .jlptlist-content h3 {
+    margin: 0 0 0 0;
+  }
+
+  .jlpt-home iframe {
+    margin-top: 30px;
+    width: 350px;
+    height: 160px;
+    align-items: center;
+    padding: 0 30px;
+  }
+
+  .jlpt-home {
+    padding: 0 0 40px 0;
+    margin: 0 20px 0 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .tabs-config {
+    font-size: 15px;
+    padding: 1rem 1rem;
+    border: .5rem solid rgb(255, 255, 255);
+    box-shadow: 0 0 1rem #c2cbd0;
+    border-radius: 5px;
+    height: 260px;
+    width: 350px;
+    background-color: #fff;
+  }
+
+  .table-jlpt {
+    padding: 40px 0px 30px 0px;
+  }
+
+  .table-jlpt td,
+  th {
+    font-size: 10px;
+  }
+
 }
