@@ -28,8 +28,10 @@ function JlptHome() {
               mas em alguns anos atrás foi adicionado um quinto nível. Esse exame começa no N5 até o N1 mas cada pessoa pode escolher
               qual o nível que deseja fazer. A prova do JLPT é feita 1 ou 2 vezes por ano dependendo da região que é feita.
               Se você é uma pessoa com o interesse de trabalhar no Japão, tenha em mente que a maioria dos trabalhos precisará no mínimo do N2 e geralmente
-              trabalho que envolve falar bastante com pessoas requer o N1. Nesse link você pode encontrar mais informações
-              sobre <Link to='/trabalho' target='_blank'>TRABALHO NO JAPÃO.</Link></h3>
+              trabalhos que envolve falar bastante com pessoas requer o N1. Nesse link você pode encontrar mais informações
+              sobre <Link to='/trabalho' target='_blank'>TRABALHO NO JAPÃO.</Link> Mas prender japonês não é fácil, é uma tarefa
+              muito árdua e requer bastante esforço, e para se tornar fluente demora muito tempo. Olhe esse vídeo e tenha uma ideia de quanto
+              tempo as pessoas demoraram para chegar no N1.</h3>
             <iframe width="559" height="310" src="https://www.youtube.com/embed/VBQSbKnuXQ4"
               title="How did you pass JLPT N1?" frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -139,6 +141,8 @@ function JlptHome() {
                 </tbody>
               </Table>
             </div>
+            <h3>Infomações mais detalhada neste site
+              <Link to='https://fjsp.org.br/wp-content/uploads/2011/04/jlpt_panfleto_pt.pdf'> Página 11 P5</Link></h3>
             <h3>Todos que prestarem o exame receberão o comunicado de aprovação ou reprovação entre um ou
               dois meses depois da realização da prova. Para aqueles que passarem na prova vão receber um certificado em suas casas.
               Esse certificado pode demorar mais de um mês para ser entregue.

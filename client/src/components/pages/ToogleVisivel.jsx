@@ -1,3 +1,4 @@
+//I'm not using
 import { Component } from "react";
 
 class TabsJlpt extends Component {

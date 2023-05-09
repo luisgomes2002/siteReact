@@ -9,7 +9,7 @@ class Loop extends Component {
     return <div>
       {
         videoAbout.map(dados =>
-          <div key={dados.name} className='video-space'>
+          <div key={dados.id} className='video-space'>
             <Link to={dados.videoUrl} target='_blank'><img src={dados.imagem} alt='' /></Link>
             <Link to={dados.videoUrl} target='_blank'>
               <h3>{dados.title}</h3>
@@ -37,7 +37,6 @@ export const VideoList = ({ videos, emptyHeading }) => {
         <Scrollbars style={{ height: 450 }}>
           <Loop />
         </Scrollbars>
-
       </div>
     </section>
   );
