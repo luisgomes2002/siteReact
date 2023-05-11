@@ -10,7 +10,7 @@ const Register = () => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const [age, setAge] = useState(0)
+  //const [age, setAge] = useState(0)
 
   const employee = () => {
     Axios.post('http://localhost:3001/register',
@@ -18,7 +18,7 @@ const Register = () => {
         name: name,
         email: email,
         password: password,
-        age: age
+        //age: age
       }).then(() => {
         console.log('success')
       })
@@ -29,37 +29,39 @@ const Register = () => {
       <nav>
         <NavBar />
         <Breadcrumb className='bread-itens-jlpt'>
-          <Breadcrumb.Item ><Link to='/'><i className="fa-solid fa-house"></i></Link></Breadcrumb.Item>
+          <Breadcrumb.Item ><Link to='/'><i className='fa-solid fa-house'></i></Link></Breadcrumb.Item>
           <Breadcrumb.Item >Registrar</Breadcrumb.Item>
         </Breadcrumb>
       </nav>
 
       <form>
-        <label>Nome:</label>
+        <h1>Criar Conta</h1>
         <input
-          type="text"
+          type='text'
+          placeholder='Nome'
           onChange={(event) => {
             setName(event.target.value)
           }} />
-        <label>Email:</label>
         <input
-          type="email"
+          type='email'
+          placeholder='Email'
           onChange={(event) => {
             setEmail(event.target.value)
           }} />
-        <label>Senha:</label>
         <input
-          type="password"
+          type='password'
+          placeholder='Senha'
           onChange={(event) => {
             setPassword(event.target.value)
           }} />
-        <label>Idade:</label>
+        {/* <label>Idade:</label>
         <input
-          type="number"
+          type='number'
           onChange={(event) => {
             setAge(event.target.value)
-          }} />
-        <button className="button-confirm" onClick={employee}>CRIAR</button>
+          }} /> */}
+        <button className='button-confirm' onClick={employee}>CRIAR</button>
+        <p><Link to='/'>Retorna para o início</Link></p>
       </form>
     </>
   )

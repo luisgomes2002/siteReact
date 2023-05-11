@@ -17,10 +17,10 @@ app.post('/register', (req, res) => {
   const name = req.body.name
   const email = req.body.email
   const password = req.body.password
-  const age = req.body.age
+  //const age = req.body.age
 
-  db.query('INSERT INTO users (user_name, user_email, user_password, user_age) VALUES (?,?,?,?)',
-    [name, email, password, age],
+  db.query('INSERT INTO users (user_name, user_email, user_password) VALUES (?,?,?)',
+    [name, email, password],
     (err, result) => {
       if (err) {
         console.log(err)
