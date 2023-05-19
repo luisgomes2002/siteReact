@@ -33,6 +33,10 @@
   margin-bottom: 5%;
 }
 
+.main-content p {
+  color: #fff;
+}
+
 .title h2 {
   text-align: center;
   padding-top: 40px;

@@ -10,15 +10,16 @@ const Register = () => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const [confirmPassword, setConfirmPassword] = useState('')
+  //const [confirmPassword, setConfirmPassword] = useState('')
 
-  const usersAccount = () => {
+  const usersAccount = (e) => {
+    e.preventDefault()
     Axios.post('http://localhost:3001/register',
       {
         name: name,
         email: email,
         password: password,
-        confirmPassword: confirmPassword
+        //confirmPassword: confirmPassword
       }).then(() => {
         console.log('success')
       })
@@ -54,15 +55,18 @@ const Register = () => {
           onChange={(event) => {
             setPassword(event.target.value)
           }} />
-        <input
+        {/* <input
           type='password'
           placeholder='Confirmar Senha'
           onChange={(event) => {
             setConfirmPassword(event.target.value)
-          }} />
+          }} /> */}
         <p>{ }</p>
         <button className='button-confirm' onClick={usersAccount}>Criar</button>
-        <p><Link to='/' className='links-form'>Retorna para o início</Link></p>
+        <p>
+          <Link to='/' className='links-form'>Retorna para o início ・</Link>
+          <Link to='/login' className='links-form'> Logar</Link>
+        </p>
       </form>
     </>
   )
