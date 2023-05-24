@@ -65,16 +65,27 @@ app.get('/login', (req, res) => {
   } else {
     res.send({ loggedIn: false })
   }
+
 })
+
+// app.get("/login", (req, res) => {
+//   db.query("SELECT * FROM users", (err, result) => {
+//     if (err) {
+//       console.log(err)
+//     } else {
+//       res.send(result)
+//     }
+//   })
+// })
 
 app.post("/login", (req, res) => {
   const name = req.body.name
-  const email = req.body.email
+  //const email = req.body.email
   const password = req.body.password
 
   db.query(
-    "SELECT * FROM users WHERE user_name = ? AND user_email",
-    [name, email],
+    'SELECT * FROM users WHERE user_name = ?',
+    [name],
     (err, result) => {
       if (err) {
         res.send({ err: err })
@@ -83,21 +94,22 @@ app.post("/login", (req, res) => {
       if (result && result.length > 0) {
         bcrypt.compare(password, result[0].user_password, function (error, response) {
           if (response) {
-            req.session.user = result
+            req.session.user = result[0]
             console.log(req.session.user)
-            res.send(result)
+            res.send({ loggedIn: true, user: result[0], message: 'Connected' })
           } else {
-            res.send({ message: "Wrong username/password combination!" })
+            res.send({ loggedIn: false, message: 'Wrong username/password combination!' })
             console.log(error)
           }
         })
       } else {
-        res.send({ message: "User doesn't exist" })
+        res.send({ loggedIn: false, message: "User doesn't exist" })
         console.log(err)
       }
     }
   )
 })
+
 
 app.listen(3001, () => {
   console.log('Server is running on port 3001')

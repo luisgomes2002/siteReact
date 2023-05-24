@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import NavBar from '../nav/Nav';
-import Breadcrumb from 'react-bootstrap/Breadcrumb';
-import { Link } from 'react-router-dom';
-import Axios from 'axios'
-import './Form.css';
+import React, { useState } from 'react'
+import NavBar from '../nav/Nav'
+import Breadcrumb from 'react-bootstrap/Breadcrumb'
+import { Link } from 'react-router-dom'
+import axios from 'axios'
+import './Form.css'
 
 const Register = () => {
 
@@ -14,7 +14,7 @@ const Register = () => {
 
   const usersAccount = (e) => {
     e.preventDefault()
-    Axios.post('http://localhost:3001/register',
+    axios.post('http://localhost:3001/register',
       {
         name: name,
         email: email,

@@ -2,24 +2,24 @@ import React, { useState, useEffect } from 'react';
 import NavBar from '../nav/Nav';
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
 import { Link } from 'react-router-dom';
-import Axios from 'axios'
+import axios from 'axios'
 import './Form.css';
 
 const Login = () => {
 
   const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
+  // const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
   const [loginStatus, setLoginStatus] = useState('')
 
-  Axios.defaults.withCredentials = true
+  axios.defaults.withCredentials = true
 
   const getUsers = (e) => {
     e.preventDefault()
-    Axios.post('http://localhost:3001/login', {
+    axios.post('http://localhost:3001/login', {
       name: name,
-      email: email,
+      // email: email,
       password: password,
     }).then((response) => {
       if (response.data.message) {
@@ -31,8 +31,8 @@ const Login = () => {
   }
 
   useEffect(() => {
-    Axios.get('http://localhost:3001/login').then((response) => {
-      if (response.data.loggedIn == true) {
+    axios.get('http://localhost:3001/login').then((response) => {
+      if (response.data.loggedIn === true) {
         setLoginStatus(response.data[0].name)
       }
     })
@@ -58,13 +58,13 @@ const Login = () => {
             setName(event.target.value)
           }}
         />
-        <input
+        {/* <input
           type='email'
           placeholder='Email'
           onChange={(event) => {
             setEmail(event.target.value)
           }}
-        />
+        /> */}
         <input
           type='password'
           autoComplete='current-password'

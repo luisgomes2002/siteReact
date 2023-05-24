@@ -6,6 +6,7 @@ import JapaneseHome from './pages/japanese/JapaneseHome';
 import Jlpt from './pages/japanese/jlpt/Jlpt';
 import Register from './login/Register';
 import Login from './login/LoginPage';
+import UserPage from './user/User';
 
 function Router() {
   return (
@@ -15,6 +16,7 @@ function Router() {
       <Route path='/jlpt' element={<Jlpt />} />
       <Route path='/register' element={<Register />} />
       <Route path='/login' element={<Login />} />
+      <Route path='/userPage' element={<UserPage />} />
       <Route path='*' element={<HomePage />} />
     </Routes>
   )

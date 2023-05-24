@@ -1,0 +1,42 @@
+.profile-user {
+  display: grid;
+  grid-template-columns: 30% 1fr;
+}
+
+.user-info {
+  background-color: rgb(32, 32, 32);
+}
+
+.user-info img {
+  border-radius: 50%;
+  height: 350px;
+  width: 350px;
+  background-color: #fff;
+  margin: 15% 0 15% 20%;
+}
+
+.user-info-base p {
+  color: #fff;
+  font-size: 20px;
+  margin-left: 100px;
+  padding: 10px;
+}
+
+.user-post {
+  background-color: black;
+}
+
+.user-info-num {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 5% 20% 10% 20%;
+  align-items: center;
+  justify-items: center;
+}
+
+.user-info-num p {
+  padding: 5px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+}
