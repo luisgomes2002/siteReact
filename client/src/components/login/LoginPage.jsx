@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import NavBar from '../nav/Nav';
-import Breadcrumb from 'react-bootstrap/Breadcrumb';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react'
+import NavBar from '../nav/Nav'
+import Breadcrumb from 'react-bootstrap/Breadcrumb'
+import { Link, Navigate } from 'react-router-dom'
 import axios from 'axios'
-import './Form.css';
+import './Form.css'
 
 const Login = () => {
 
@@ -19,13 +19,14 @@ const Login = () => {
     e.preventDefault()
     axios.post('http://localhost:3001/login', {
       name: name,
-      // email: email,
+      //email: email
       password: password,
     }).then((response) => {
       if (response.data.message) {
         setLoginStatus(response.data.message)
-      } else {
+      } else if (response.data[0] && response.data[0].name) {
         setLoginStatus(response.data[0].name)
+        return <Navigate to="/userPage" replace />
       }
     })
   }

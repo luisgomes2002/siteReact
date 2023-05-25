@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import NavBar from '../nav/Nav'
+import { Navigate } from 'react-router-dom'
 import './User.css'
 import Baka from '../../assets/baka/background.jpg'
 import axios from 'axios'
@@ -7,17 +8,23 @@ import axios from 'axios'
 const UserPage = () => {
 
   const [name, setName] = useState('')
+  const [loggedIn, setLoggedIn] = useState(false)
 
   useEffect(() => {
     getUsers()
   }, [])
 
   const getUsers = () => {
-    axios.get("http://localhost:3001/login").then((response) => {
+    axios.get('http://localhost:3001/login').then((response) => {
       if (response.data.loggedIn === true) {
         setName(response.data.user.user_name)
+        setLoggedIn(true)
       }
     })
+  }
+
+  if (!loggedIn) {
+    return <Navigate to='/userPage' replace />
   }
 
   return (
