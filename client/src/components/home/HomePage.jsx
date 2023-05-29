@@ -80,7 +80,7 @@ function Services() {
 function About() {
   return (
     <div className='text'>
-      <h1>ABOUT</h1>
+      <h1>SOBRE</h1>
       <div className='about-box'>
         <Card style={{ width: '18rem' }} className='m-3'>
           <Card.Img variant="top" src="holder.js/100px180" />

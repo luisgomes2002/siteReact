@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import NavBar from '../nav/Nav'
 import Breadcrumb from 'react-bootstrap/Breadcrumb'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import './Form.css'
 
@@ -11,6 +11,7 @@ const Register = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   //const [confirmPassword, setConfirmPassword] = useState('')
+  const navigate = useNavigate()
 
   const usersAccount = (e) => {
     e.preventDefault()
@@ -22,6 +23,7 @@ const Register = () => {
         //confirmPassword: confirmPassword
       }).then(() => {
         console.log('success')
+        navigate('/')
       })
   }
 

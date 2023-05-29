@@ -50,8 +50,8 @@ app.post('/register', (req, res) => {
     }
 
     db.query(
-      'INSERT INTO users (user_name, user_email, user_password) VALUES (?,?,?)',
-      [name, email, hash],
+      'INSERT INTO users (user_name, user_email, user_password, admin, user_age) VALUES (?,?,?,?,?)',
+      [name, email, hash, admin, age],
       (err, result) => {
         console.log(err)
       }
@@ -68,17 +68,7 @@ app.get('/login', (req, res) => {
 
 })
 
-// app.get("/login", (req, res) => {
-//   db.query("SELECT * FROM users", (err, result) => {
-//     if (err) {
-//       console.log(err)
-//     } else {
-//       res.send(result)
-//     }
-//   })
-// })
-
-app.post("/login", (req, res) => {
+app.post('/login', (req, res) => {
   const name = req.body.name
   //const email = req.body.email
   const password = req.body.password
@@ -96,14 +86,14 @@ app.post("/login", (req, res) => {
           if (response) {
             req.session.user = result[0]
             console.log(req.session.user)
-            res.send({ loggedIn: true, user: result[0], message: 'Connected' })
+            res.send({ loggedIn: true, user: result[0], message: 'Conectado' })
           } else {
-            res.send({ loggedIn: false, message: 'Wrong username/password combination!' })
+            res.send({ loggedIn: false, message: 'Combinação de nome de usuário/senha incorreta!' })
             console.log(error)
           }
         })
       } else {
-        res.send({ loggedIn: false, message: "User doesn't exist" })
+        res.send({ loggedIn: false, message: 'O usuário não existe' })
         console.log(err)
       }
     }

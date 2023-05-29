@@ -40,3 +40,76 @@
   color: #ffffff;
   text-align: center;
 }
+
+.user-posts {
+  border: #fff solid 2px;
+  background-color: #fff;
+  border-radius: 5px;
+  width: 90%;
+  margin: 70px;
+  height: 65%;
+}
+
+.posts-area {
+  margin: 0 30px 15px;
+}
+
+.posts-container {
+  border: solid 2px rgb(32, 32, 32);
+  background-color: rgb(32, 32, 32);
+  border-radius: 20px;
+  padding: 50px 20px 50px 20px;
+  width: 100%;
+}
+
+.posts-container h2 {
+  color: #fff;
+  padding-bottom: 50px;
+  margin-left: 30px;
+}
+
+.posts-space {
+  border: solid 2px #ffffff;
+  border-radius: 20px;
+  margin: 20px 30px 20px 30px;
+  display: grid;
+  grid-template-columns: 25% 1fr;
+  transition: 0.3s ease-in;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  padding: 10px;
+  background-color: #ffffff;
+}
+
+.posts-space a {
+  text-decoration: none;
+}
+
+.posts-space img {
+  border-radius: 20px;
+  /* width: 90%; */
+  height: 100%;
+  width: 90%;
+  margin: 0px auto;
+}
+
+.posts-space h3 {
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.posts-space p {
+  font-size: 0.8rem;
+  color: #ffffff;
+}
+
+.posts-container h2 {
+  color: rgb(255, 255, 255);
+}
+
+.posts-space:hover {
+  transform: scale(1.020);
+  transition: 0.3s ease-in;
+  cursor: pointer;
+}

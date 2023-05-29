@@ -1,17 +1,19 @@
 import React, { useState, useEffect } from 'react'
 import NavBar from '../nav/Nav'
 import Breadcrumb from 'react-bootstrap/Breadcrumb'
-import { Link, Navigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import './Form.css'
 
 const Login = () => {
 
+  const navigate = useNavigate()
+
   const [name, setName] = useState('')
   // const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-
   const [loginStatus, setLoginStatus] = useState('')
+  const [redirectToUserPage, setRedirectToUserPage] = useState(true)
 
   axios.defaults.withCredentials = true
 
@@ -25,8 +27,8 @@ const Login = () => {
       if (response.data.message) {
         setLoginStatus(response.data.message)
       } else if (response.data[0] && response.data[0].name) {
+        setRedirectToUserPage(true)
         setLoginStatus(response.data[0].name)
-        return <Navigate to="/userPage" replace />
       }
     })
   }
@@ -34,10 +36,17 @@ const Login = () => {
   useEffect(() => {
     axios.get('http://localhost:3001/login').then((response) => {
       if (response.data.loggedIn === true) {
+        ToUserPage()
         setLoginStatus(response.data[0].name)
       }
     })
   }, [])
+
+  const ToUserPage = () => {
+    if (redirectToUserPage) {
+      navigate('/userpage')
+    }
+  }
 
   return (
     <>
