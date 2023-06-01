@@ -13,13 +13,14 @@ const Login = () => {
   // const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [loginStatus, setLoginStatus] = useState('')
-  const [redirectToUserPage, setRedirectToUserPage] = useState(true)
+  const [id] = useState('')
 
   axios.defaults.withCredentials = true
 
   const getUsers = (e) => {
-    e.preventDefault()
+    //e.preventDefault()
     axios.post('http://localhost:3001/login', {
+      id: id,
       name: name,
       //email: email
       password: password,
@@ -27,7 +28,6 @@ const Login = () => {
       if (response.data.message) {
         setLoginStatus(response.data.message)
       } else if (response.data[0] && response.data[0].name) {
-        setRedirectToUserPage(true)
         setLoginStatus(response.data[0].name)
       }
     })
@@ -36,17 +36,11 @@ const Login = () => {
   useEffect(() => {
     axios.get('http://localhost:3001/login').then((response) => {
       if (response.data.loggedIn === true) {
-        ToUserPage()
+        navigate('/userpage')
         setLoginStatus(response.data[0].name)
       }
     })
   }, [])
-
-  const ToUserPage = () => {
-    if (redirectToUserPage) {
-      navigate('/userpage')
-    }
-  }
 
   return (
     <>

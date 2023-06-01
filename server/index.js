@@ -50,8 +50,8 @@ app.post('/register', (req, res) => {
     }
 
     db.query(
-      'INSERT INTO users (user_name, user_email, user_password, admin, user_age) VALUES (?,?,?,?,?)',
-      [name, email, hash, admin, age],
+      'INSERT INTO users (user_name, user_email, user_password) VALUES (?,?,?)',
+      [name, email, hash],
       (err, result) => {
         console.log(err)
       }
@@ -65,7 +65,6 @@ app.get('/login', (req, res) => {
   } else {
     res.send({ loggedIn: false })
   }
-
 })
 
 app.post('/login', (req, res) => {
@@ -98,6 +97,23 @@ app.post('/login', (req, res) => {
       }
     }
   )
+})
+
+app.put('/update', (req, res) => {
+  const id = req.params.id
+  const email = req.body.email;
+
+  db.query(
+    `UPDATE users SET user_email = ? WHERE id = ?`,
+    [email, id],
+    (err, result) => {
+      if (err) {
+        console.error('Erro ao alterar registro:', err)
+        res.status(500).send('Erro ao alterar registro')
+        return
+      }
+      res.send('Registro alterado com sucesso')
+    })
 })
 
 

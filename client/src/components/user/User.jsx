@@ -5,6 +5,7 @@ import './User.css'
 import Baka from '../../assets/baka/background.jpg'
 import axios from 'axios'
 import { videoAbout } from '../pages/videos/JlptVideosEx';
+import { Link } from 'react-router-dom'
 
 class Loop extends Component {
   render() {
@@ -12,6 +13,11 @@ class Loop extends Component {
       {
         videoAbout.map(dados =>
           <div className='posts-space'>
+            <div></div>
+            <div className='link-count'>
+              <i className="fa-solid fa-heart fa-xl"></i>
+              <p>0</p>
+            </div>
 
           </div>
         )
@@ -70,6 +76,7 @@ const UserPage = () => {
         <div className='user-info'>
           <img src={Baka}></img>
           <div className='user-info-base'>
+            <Link to='/update'><button>Go</button ></Link>
             <p>Name: {name}</p>
             <p>Age: {age ? age : 'Nada informado'}</p>
             <p>Gender: {/*{gender ? gender : 'Nada informado'} */}</p>
@@ -88,7 +95,7 @@ const UserPage = () => {
           </div>
         </div>
       </div>
-    </div>
+    </div >
   )
 }
 

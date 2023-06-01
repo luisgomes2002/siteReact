@@ -73,7 +73,7 @@
   border-radius: 20px;
   margin: 20px 30px 20px 30px;
   display: grid;
-  grid-template-columns: 25% 1fr;
+  grid-template-columns: 1fr 5%;
   transition: 0.3s ease-in;
   align-items: center;
   justify-content: center;
@@ -112,4 +112,13 @@
   transform: scale(1.020);
   transition: 0.3s ease-in;
   cursor: pointer;
+}
+
+.link-count {
+  text-align: center;
+}
+
+.link-count p {
+  color: black;
+  font-size: 20px;
 }

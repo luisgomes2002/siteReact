@@ -6,6 +6,7 @@ import Jlpt from './pages/japanese/jlpt/Jlpt'
 import Register from './login/Register'
 import Login from './login/LoginPage'
 import UserPage from './user/User'
+import UserUpdate from './user/UserUpdate'
 import ErroPage from './ErroPage'
 
 function Router() {
@@ -18,6 +19,7 @@ function Router() {
       <Route path='/register' element={<Register />} />
       <Route path='/login' element={<Login />} />
       <Route path='/userpage' element={<UserPage />} />
+      <Route path='/update' element={<UserUpdate />} />
       <Route path='*' element={<ErroPage />} />
     </Routes>
   )
