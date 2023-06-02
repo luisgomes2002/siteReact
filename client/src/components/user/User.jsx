@@ -26,13 +26,16 @@ class Loop extends Component {
   }
 }
 
-const UserPage = () => {
+const UserPage = ({ post, emptyHeading }) => {
   const [name, setName] = useState('')
   const [age, setAge] = useState('')
   //const [gender, setGender] = useState('')
 
+  const [id, setId] = useState('')
+
   useEffect(() => {
     getUsers()
+
   }, [])
 
   const getUsers = () => {
@@ -40,32 +43,20 @@ const UserPage = () => {
       if (response.data.loggedIn === true) {
         setName(response.data.user.user_name)
         setAge(response.data.user.user_age)
+        setId(response.data.user.user_id)
         //setGender(response.data.user.user_name)
         //setJapLevel(response.data.user.user_name)
       }
     })
   }
 
-  const PostList = ({ post, emptyHeading }) => {
-    post = videoAbout.length
-    const count = post;
-    let heading = emptyHeading;
-    if (count > 0) {
-      const noun = count > 1 ? 'Posts' : 'Post';
-      heading = count + ' ' + noun;
-    }
-    return (
-      <section>
-        <div className='posts-container'>
-          <h2>{heading}</h2>
-          <Scrollbars style={{ height: 450 }}>
-            <Loop />
-          </Scrollbars>
-        </div>
-      </section>
-    );
+  post = videoAbout.length
+  const count = post;
+  let heading = emptyHeading;
+  if (count > 0) {
+    const noun = count > 1 ? 'Posts' : 'Post';
+    heading = count + ' ' + noun;
   }
-
 
   return (
     <div>
@@ -76,7 +67,7 @@ const UserPage = () => {
         <div className='user-info'>
           <img src={Baka}></img>
           <div className='user-info-base'>
-            <Link to='/update'><button>Go</button ></Link>
+            <Link to={`/update/${id}`}><button>Go Update id={id}</button></Link>
             <p>Name: {name}</p>
             <p>Age: {age ? age : 'Nada informado'}</p>
             <p>Gender: {/*{gender ? gender : 'Nada informado'} */}</p>
@@ -86,12 +77,18 @@ const UserPage = () => {
         </div>
         <div className='user-post'>
           <div className='user-info-num'>
-            <p>0 Posts</p>
+            <p>{heading}</p>
             <p>0 Seguidores</p>
             <p>0 Seguindo</p>
           </div>
           <div className='posts-area'>
-            <PostList />
+            <section>
+              <div className='posts-container'>
+                <Scrollbars style={{ height: 700 }}>
+                  <Loop />
+                </Scrollbars>
+              </div>
+            </section>
           </div>
         </div>
       </div>

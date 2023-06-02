@@ -13,14 +13,13 @@ const Login = () => {
   // const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [loginStatus, setLoginStatus] = useState('')
-  const [id] = useState('')
+
 
   axios.defaults.withCredentials = true
 
   const getUsers = (e) => {
     //e.preventDefault()
     axios.post('http://localhost:3001/login', {
-      id: id,
       name: name,
       //email: email
       password: password,

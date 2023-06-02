@@ -7,43 +7,45 @@ const Update = () => {
 
   const navigate = useNavigate()
 
-  const [newName, setNewName] = useState('')
+  // const [newName, setNewName] = useState('')
   // const [newAge, setNewAge] = useState(0)
   // const [newGender, setNewGender] = useState('opN')
   const [newEmail, setNewEmail] = useState('')
-  const [newPassword, setNewPassword] = useState('')
+  // const [newPassword, setNewPassword] = useState('')
   // const [newJlpt, setNewJlpt] = useState('Default')
+  const [id, setId] = useState('')
 
-
-  const upUsers = (id) => {
-    //e.preventDefault()
+  useEffect(() => {
     axios.get('http://localhost:3001/login').then((response) => {
       if (response.data.loggedIn === true) {
-        axios.put(`http://localhost:3001/update/${id}`, {
-          id: id,
-          name: newName,
-          email: newEmail,
-          password: newPassword,
-        }).then((response) => {
-          alert('ok')
-        })
+        setId(response.data.user.user_id)
+
       } else {
         navigate('/login')
       }
     })
+  })
 
+  const upUsers = () => {
+    axios.put(`http://localhost:3001/update/${id}`, {
+      newEmail: newEmail
+    })
+      .then((response) => {
+        console.log(response.data)
+      })
   }
+
 
 
   return (
     <div>
-      <input
+      {/* <input
         type='text'
         autoComplete='username'
         placeholder='Nome'
         onChange={(event) => {
           setNewName(event.target.value)
-        }} />
+        }} /> */}
       {/* <input
         type='text'
         placeholder='Idade'
@@ -81,14 +83,14 @@ const Update = () => {
         onChange={(event) => {
           setNewEmail(event.target.value)
         }} />
-      <input
+      {/* <input
         type='password'
         autoComplete='current-password'
         placeholder='Senha'
         onChange={(event) => {
           setNewPassword(event.target.value)
         }}
-      />
+      /> */}
       {/* <label>
         JLPT Level:
         <select name='JLPT' onChange={(e) => setNewJlpt(e.target.value)}>

@@ -14,7 +14,7 @@ const app = express()
 app.use(express.json())
 app.use(cors({
   origin: ['http://localhost:3000'],
-  methods: ['GET', 'POST'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true,
 }))
 app.use(cookieParser())
@@ -67,6 +67,20 @@ app.get('/login', (req, res) => {
   }
 })
 
+app.get('/user', (req, res) => {
+
+  db.query(
+    'SELECT user_id from users ',
+    (err, result) => {
+      if (err) {
+        res.send({ err: err });
+      } else {
+        res.send(result[0]);
+      }
+    }
+  )
+})
+
 app.post('/login', (req, res) => {
   const name = req.body.name
   //const email = req.body.email
@@ -99,12 +113,12 @@ app.post('/login', (req, res) => {
   )
 })
 
-app.put('/update', (req, res) => {
+app.put('/update/:id', (req, res) => {
   const id = req.params.id
-  const email = req.body.email;
+  const email = req.body.newEmail
 
   db.query(
-    `UPDATE users SET user_email = ? WHERE id = ?`,
+    `UPDATE users SET user_email = ? WHERE user_id = ?`,
     [email, id],
     (err, result) => {
       if (err) {
