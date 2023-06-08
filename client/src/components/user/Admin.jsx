@@ -37,7 +37,8 @@ const AdminPage = ({ post, emptyHeading }) => {
 
 
   //client
-  const [clientId, setClientId] = useState([])
+  const [info, setInfo] = useState([])
+  const [deleteInfo, setDeleteInfo] = useState([])
 
   useEffect(() => {
     getUsersForTable()
@@ -58,7 +59,17 @@ const AdminPage = ({ post, emptyHeading }) => {
 
   const getUsersForTable = () => {
     axios.get('http://localhost:3001/userfortable').then((response) => {
-      setClientId(response.data)
+      setInfo(response.data)
+    })
+  }
+
+  const deleteUser = (id) => {
+    axios.delete(`http://localhost:3001/delete/${id}`).then((response) => {
+      setDeleteInfo(
+        deleteInfo.filter((val) => {
+          return val.user_id != id
+        })
+      )
     })
   }
 
@@ -118,18 +129,27 @@ const AdminPage = ({ post, emptyHeading }) => {
                         </tr>
                       </thead>
                       <tbody>
-                        {clientId.map((val, key) => {
+                        {info.map((val, key) => {
                           return (
-                            <tr>
-                              <td>{val.user_id}</td>
-                              <td>{val.user_name}</td>
-                              <td>{val.user_email}</td>
-                              <td>{val.user_age}</td>
-                              <td>{val.admin}</td>
-                            </tr>
+                            <>
+                              <tr>
+                                <td>{val.user_id}</td>
+                                <td>{val.user_name}</td>
+                                <td>{val.user_email}</td>
+                                <td>{val.user_age}</td>
+                                <td>{val.admin} </td>
+                                <td>
+                                  <button
+                                    className='delete-button'
+                                    onClick={() => { deleteUser(val.user_id) }}
+                                  >
+                                    Delete
+                                  </button>
+                                </td>
+                              </tr>
+                            </>
                           )
                         })}
-
                       </tbody>
                     </Table>
                   </Tab>
