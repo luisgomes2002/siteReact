@@ -8,6 +8,7 @@ import Login from './login/LoginPage'
 import UserPage from './user/User'
 import Update from './user/UserUpdate'
 import ErroPage from './ErroPage'
+import AdminPage from './user/Admin'
 
 function Router() {
   return (
@@ -19,6 +20,7 @@ function Router() {
       <Route path='/login' element={<Login />} />
       <Route path='/userpage' element={<UserPage />} />
       <Route path='/update/:id' element={<Update />} />
+      <Route path='/adminpage' element={<AdminPage />} />
       <Route path='*' element={<ErroPage />} />
     </Routes>
   )

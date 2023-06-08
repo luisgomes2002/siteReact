@@ -23,7 +23,7 @@
 }
 
 .user-post {
-  background-color: black;
+  background-color: rgb(255, 255, 255);
 }
 
 .user-info-num {
@@ -37,7 +37,7 @@
 .user-info-num p {
   padding: 5px;
   font-size: 20px;
-  color: #ffffff;
+  color: #000000;
   text-align: center;
 }
 
@@ -54,10 +54,11 @@
   margin: 0 30px 15px;
 }
 
+/* #FFF5EE */
 .posts-container {
   border: solid 2px rgb(32, 32, 32);
   background-color: rgb(32, 32, 32);
-  border-radius: 20px;
+  border-radius: 5px;
   padding: 50px 20px 50px 20px;
   width: 100%;
 }
@@ -121,4 +122,14 @@
 .link-count p {
   color: black;
   font-size: 20px;
+}
+
+/* tabs colors */
+.nav-link {
+  --bs-nav-link-color: #ffffff;
+  --bs-nav-link-hover-color: #121212;
+}
+
+.table {
+  background-color: #fff;
 }

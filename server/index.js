@@ -27,7 +27,7 @@ app.use(
     resave: false,
     saveUninitialized: false,
     cookie: {
-      expires: 60 * 60 * 24,
+      expires: 86400 * 2,
     },
   })
 )
@@ -81,6 +81,20 @@ app.get('/user', (req, res) => {
   )
 })
 
+app.get('/userfortable', (req, res) => {
+
+  db.query(
+    'SELECT * from users ',
+    (err, result) => {
+      if (err) {
+        res.send({ err: err });
+      } else {
+        res.send(result);
+      }
+    }
+  )
+})
+
 app.post('/login', (req, res) => {
   const name = req.body.name
   //const email = req.body.email
@@ -115,11 +129,13 @@ app.post('/login', (req, res) => {
 
 app.put('/update/:id', (req, res) => {
   const id = req.params.id
+  const name = req.body.newName
   const email = req.body.newEmail
+  const age = req.body.newAge
 
   db.query(
-    `UPDATE users SET user_email = ? WHERE user_id = ?`,
-    [email, id],
+    `UPDATE users SET user_name = ?, user_email = ?, user_age = ? WHERE user_id = ?`,
+    [name, email, age, id],
     (err, result) => {
       if (err) {
         console.error('Erro ao alterar registro:', err)

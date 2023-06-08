@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import NavBar from '../nav/Nav'
 import Breadcrumb from 'react-bootstrap/Breadcrumb'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
 import './Form.css'
 
@@ -11,10 +11,10 @@ const Register = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   //const [confirmPassword, setConfirmPassword] = useState('')
-  const navigate = useNavigate()
+
 
   const usersAccount = (e) => {
-    e.preventDefault()
+    //e.preventDefault()
     axios.post('http://localhost:3001/register',
       {
         name: name,
@@ -23,7 +23,6 @@ const Register = () => {
         //confirmPassword: confirmPassword
       }).then(() => {
         console.log('success')
-        navigate('/')
       })
   }
 
@@ -67,7 +66,7 @@ const Register = () => {
         <button className='button-confirm' onClick={usersAccount}>Criar</button>
         <p>
           <Link to='/' className='links-form'>Retorna para o início ・</Link>
-          <Link to='/login' className='links-form'> Logar</Link>
+          <Link to='/login' className='links-form'> Login</Link>
         </p>
       </form>
     </>

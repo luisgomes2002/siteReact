@@ -18,7 +18,7 @@ const Login = () => {
   axios.defaults.withCredentials = true
 
   const getUsers = (e) => {
-    //e.preventDefault()
+    e.preventDefault()
     axios.post('http://localhost:3001/login', {
       name: name,
       //email: email
@@ -52,7 +52,7 @@ const Login = () => {
       </nav>
 
       <form >
-        <h1>Logar</h1>
+        <h1>Login</h1>
         <input
           type='text'
           autoComplete='username'

@@ -30,7 +30,6 @@ const UserPage = ({ post, emptyHeading }) => {
   const [name, setName] = useState('')
   const [age, setAge] = useState('')
   //const [gender, setGender] = useState('')
-
   const [id, setId] = useState('')
 
   useEffect(() => {
