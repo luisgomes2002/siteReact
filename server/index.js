@@ -67,22 +67,7 @@ app.get('/login', (req, res) => {
   }
 })
 
-app.get('/user', (req, res) => {
-
-  db.query(
-    'SELECT user_id from users ',
-    (err, result) => {
-      if (err) {
-        res.send({ err: err })
-      } else {
-        res.send(result[0])
-      }
-    }
-  )
-})
-
 app.get('/userfortable', (req, res) => {
-
   db.query(
     'SELECT * from users ',
     (err, result) => {

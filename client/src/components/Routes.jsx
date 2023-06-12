@@ -9,6 +9,7 @@ import UserPage from './user/User'
 import Update from './user/UserUpdate'
 import ErroPage from './ErroPage'
 import AdminPage from './user/Admin'
+import Portfolio from './portfolio/Portfolio'
 
 function Router() {
   return (
@@ -21,6 +22,7 @@ function Router() {
       <Route path='/userpage' element={<UserPage />} />
       <Route path='/update/:id' element={<Update />} />
       <Route path='/adminpage' element={<AdminPage />} />
+      <Route path='/portfolio' element={<Portfolio />} />
       <Route path='*' element={<ErroPage />} />
     </Routes>
   )

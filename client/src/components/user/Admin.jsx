@@ -4,11 +4,11 @@ import NavBar from '../nav/Nav'
 import './User.css'
 import Baka from '../../assets/baka/background.jpg'
 import axios from 'axios'
-import { videoAbout } from '../pages/videos/JlptVideosEx';
+import { videoAbout } from '../pages/videos/JlptVideosEx'
 import { Link } from 'react-router-dom'
-import Tab from 'react-bootstrap/Tab';
-import Tabs from 'react-bootstrap/Tabs';
-import Table from 'react-bootstrap/Table';
+import Tab from 'react-bootstrap/Tab'
+import Tabs from 'react-bootstrap/Tabs'
+import Table from 'react-bootstrap/Table'
 
 class Loop extends Component {
   render() {
@@ -74,11 +74,11 @@ const AdminPage = ({ post, emptyHeading }) => {
   }
 
   post = videoAbout.length
-  const count = post;
-  let heading = emptyHeading;
+  const count = post
+  let heading = emptyHeading
   if (count > 0) {
-    const noun = count > 1 ? 'Posts' : 'Post';
-    heading = count + ' ' + noun;
+    const noun = count > 1 ? 'Posts' : 'Post'
+    heading = count + ' ' + noun
   }
 
   return (
@@ -90,12 +90,16 @@ const AdminPage = ({ post, emptyHeading }) => {
         <div className='user-info'>
           <img src={Baka}></img>
           <div className='user-info-base'>
-            <Link to={`/update/${id}`}><button>Go Update id={id}</button></Link>
+            <div className='button-edit'>
+              <Link to={`/update/${id}`}>
+                <i className="fa-solid fa-pen-to-square"></i>
+              </Link>
+            </div>
             <p>Name: {name}</p>
             <p>Age: {age ? age : 'Nada informado'}</p>
             <p>Gender: {/*{gender ? gender : 'Nada informado'} */}</p>
             <p>Japanese level: {/*{JapLevel ? JapLevel : 'Nada informado'} */}</p>
-            <p>Self-introduction:</p>
+            <p>Self-introduction: </p>
           </div>
         </div>
         <div className='user-post'>
@@ -113,7 +117,7 @@ const AdminPage = ({ post, emptyHeading }) => {
                   className="mb-3"
                 >
                   <Tab eventKey="posts" title="Posts">
-                    <Scrollbars style={{ height: 700 }}>
+                    <Scrollbars style={{ height: 550 }}>
                       <Loop />
                     </Scrollbars>
                   </Tab>

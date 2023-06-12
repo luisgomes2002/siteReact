@@ -1,0 +1,51 @@
+.main-itens {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: black;
+  padding: 40px;
+}
+
+.title-name {
+  background-color: black;
+  padding: 35px;
+}
+
+.title-name h1 {
+  color: #fff;
+  text-align: center;
+}
+
+.img-space {
+  display: grid;
+  grid-template-columns: 65% 1fr;
+}
+
+.card-space {
+  background-color: rgb(31, 31, 31);
+  border: 1px solid rgb(31, 31, 31);
+  border-radius: 5px;
+  width: 900px;
+  height: 400px;
+  transition: 0.3s ease-in;
+  margin: 10px;
+  margin-bottom: 15px;
+}
+
+.card-space p {
+  color: #fff;
+  padding-top: 10px;
+  padding-left: 15px;
+}
+
+.card-space:hover {
+  transform: scale(1.02);
+  transition: 0.3s ease-in;
+  cursor: pointer;
+}
+
+img {
+  border-radius: 5px;
+  margin: 20px;
+  width: 550px;
+  height: 300px;
+}
