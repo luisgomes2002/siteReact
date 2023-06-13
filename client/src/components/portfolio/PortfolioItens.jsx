@@ -1,19 +1,12 @@
-import Murasaki from '../../assets/portfolio/Murasaki.png'
-import imagem1 from '../../assets/baka/background.jpg'
-import imagem2 from '../../assets/baka/background2.jpg'
+import imgCard from '../../assets/baka/card.jpg'
 
 export const itens = [
   {
     id: 0,
-    portfolioImg: [Murasaki, imagem1, imagem2],
-    text: 'Site de ensino da língua e cultura japonesa',
-    info: 'React js / Node.js / MySQL'
+    name: 'Murasaki',
+    portfolioImg: [imgCard],
+    text: 'Website for people who want to learn Japanese, about Japan or share their study experiences.',
+    info: 'Created with React js / Node.js / MySQL',
+    link: '/'
   },
-  {
-    id: 1,
-    portfolioImg: [Murasaki, imagem1],
-    text: 'Teste',
-    info: 'Feito com nada'
-  },
-
 ]

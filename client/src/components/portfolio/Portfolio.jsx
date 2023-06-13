@@ -1,26 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Portfolio.css'
 import NavBar from '../nav/Nav'
 import { itens } from './PortfolioItens'
+import { Link } from 'react-router-dom'
 
 const Portfolio = () => {
-  const [carouselIndices, setCarouselIndices] = useState(itens.map(() => 0))
-
-  const previousImage = (index) => {
-    setCarouselIndices((prevIndices) => {
-      const newIndices = [...prevIndices]
-      newIndices[index] = (newIndices[index] - 1 + itens[index].portfolioImg.length) % itens[index].portfolioImg.length
-      return newIndices
-    })
-  }
-
-  const nextImage = (index) => {
-    setCarouselIndices((prevIndices) => {
-      const newIndices = [...prevIndices]
-      newIndices[index] = (newIndices[index] + 1) % itens[index].portfolioImg.length
-      return newIndices
-    })
-  }
 
   return (
     <div>
@@ -28,18 +12,23 @@ const Portfolio = () => {
         <NavBar />
       </nav>
       <div className='title-name'>
-        <h1>Murasaki Produtos</h1>
+        <h1>Murasaki Products</h1>
+        <p style={{ textAlign: 'center' }}>All services provided by Murasaki</p>
       </div>
       <div className='main-itens'>
         {itens.map((importPort, index) => (
           <div key={importPort.id} className='card-space'>
             <div className='img-space'>
-              <img src={importPort.portfolioImg[carouselIndices[index]]} alt='Imagem do portfólio' />
-              <p>{importPort.text}</p>
+              <img src={importPort.portfolioImg} alt='Imagem do portfólio' />
+              <div className='info-card'>
+                <h1>{importPort.name}</h1>
+                <p>{importPort.info}</p>
+                <hr />
+                <Link to={importPort.link}><button className='button-card'>Page</button></Link>
+                <Link to={importPort.link}><button className='button-card'>Info</button></Link>
+                <p>{importPort.text}</p>
+              </div>
             </div>
-            <p>{importPort.info}</p>
-            <button onClick={() => previousImage(index)}>Anterior</button>
-            <button onClick={() => nextImage(index)}>Próxima</button>
           </div>
         ))}
       </div>
