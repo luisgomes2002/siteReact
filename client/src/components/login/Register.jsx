@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import NavBar from '../nav/Nav'
 import Breadcrumb from 'react-bootstrap/Breadcrumb'
 import { Link } from 'react-router-dom'
@@ -11,19 +11,33 @@ const Register = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   //const [confirmPassword, setConfirmPassword] = useState('')
-
+  const [RegisterStatus, setRegisterStatus] = useState('')
+  const [emailError, setEmailError] = useState(false)
 
   const usersAccount = (e) => {
-    //e.preventDefault()
-    axios.post('http://localhost:3001/register',
-      {
-        name: name,
-        email: email,
-        password: password,
-        //confirmPassword: confirmPassword
-      }).then(() => {
-        console.log('success')
-      })
+    e.preventDefault()
+    if (password.length <= 7) {
+      setRegisterStatus('Senha menor que 8 dígitos')
+    } else {
+      axios
+        .post('http://localhost:3001/register', {
+          name: name,
+          email: email,
+          password: password,
+        })
+        .then((res) => {
+          if (res.data.error) {
+            setEmailError(true)
+            setRegisterStatus(res.data.error)
+          } else if (res.data.success) {
+            setRegisterStatus(res.data.success)
+          }
+        })
+        .catch((error) => {
+          console.log(error)
+          setRegisterStatus('Ocorreu um erro ao criar a conta')
+        })
+    }
   }
 
   return (
@@ -62,7 +76,8 @@ const Register = () => {
           onChange={(event) => {
             setConfirmPassword(event.target.value)
           }} /> */}
-        <p>{ }</p>
+        <p>{RegisterStatus}</p>
+        <p>{emailError}</p>
         <button className='button-confirm' onClick={usersAccount}>Criar</button>
         <p>
           <Link to='/' className='links-form'>Retorna para o início ・</Link>

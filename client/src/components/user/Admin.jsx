@@ -8,7 +8,7 @@ import { videoAbout } from '../pages/videos/JlptVideosEx'
 import { Link } from 'react-router-dom'
 import Tab from 'react-bootstrap/Tab'
 import Tabs from 'react-bootstrap/Tabs'
-import Table from 'react-bootstrap/Table'
+
 
 class Loop extends Component {
   render() {
@@ -17,8 +17,8 @@ class Loop extends Component {
         videoAbout.map(dados =>
           <div className='posts-space'>
             <div></div>
-            <div className='link-count'>
-              <i className="fa-solid fa-heart fa-xl"></i>
+            <div className='link-count' style={{ color: '#fff' }}>
+              <i className='fa-solid fa-heart fa-xl'></i>
               <p>0</p>
             </div>
 
@@ -35,10 +35,21 @@ const AdminPage = ({ post, emptyHeading }) => {
   //const [gender, setGender] = useState('')
   const [id, setId] = useState('')
 
-
   //client
   const [info, setInfo] = useState([])
   const [deleteInfo, setDeleteInfo] = useState([])
+
+  //Modal
+  const [modalOpen, setModalOpen] = useState(false)
+
+  const openModal = () => {
+    setModalOpen(true)
+  }
+
+  const closeModal = () => {
+    setModalOpen(false)
+  }
+
 
   useEffect(() => {
     getUsersForTable()
@@ -67,10 +78,32 @@ const AdminPage = ({ post, emptyHeading }) => {
     axios.delete(`http://localhost:3001/delete/${id}`).then((response) => {
       setDeleteInfo(
         deleteInfo.filter((val) => {
-          return val.user_id != id
+          return val.user_id !== id
         })
       )
     })
+  }
+
+  const Modal = ({ isOpen, onClose }) => {
+    if (!isOpen) return null
+
+    return (
+      <div className='modal-delete'>
+        <div className='modal-content-delete'>
+          <button className='close-button-delete' onClick={onClose}>
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          {/* <h2>Excluir Conta "{val.user_name}"</h2> */}
+          <p>Conteúdo do Modal</p>
+          <button
+            className='delete-button'
+          // onClick={() => { deleteUser(val.user_id) }}
+          >
+            Delete
+          </button>
+        </div>
+      </div>
+    )
   }
 
   post = videoAbout.length
@@ -92,7 +125,7 @@ const AdminPage = ({ post, emptyHeading }) => {
           <div className='user-info-base'>
             <div className='button-edit'>
               <Link to={`/update/${id}`}>
-                <i className="fa-solid fa-pen-to-square"></i>
+                <i className='fa-solid fa-pen-to-square'></i>
               </Link>
             </div>
             <p>Name: {name}</p>
@@ -112,26 +145,24 @@ const AdminPage = ({ post, emptyHeading }) => {
             <section>
               <div className='posts-container'>
                 <Tabs
-                  defaultActiveKey="profile"
-                  id="uncontrolled-tab-example"
-                  className="mb-3"
+                  defaultActiveKey='profile'
+                  id='uncontrolled-tab-example'
+                  className='mb-3'
                 >
-                  <Tab eventKey="posts" title="Posts">
-                    <Scrollbars style={{ height: 550 }}>
+                  <Tab eventKey='posts' title='Posts'>
+                    <Scrollbars style={{ height: 560 }}>
                       <Loop />
                     </Scrollbars>
                   </Tab>
-                  <Tab eventKey="users" title="Users">
-                    <Table striped bordered hover>
-                      <thead>
-                        <tr>
-                          <th>ID</th>
-                          <th>Name</th>
-                          <th>Email</th>
-                          <th>Age</th>
-                          <th>Admin</th>
-                        </tr>
-                      </thead>
+                  <Tab eventKey='users' title='Users'>
+                    <table>
+                      <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Age</th>
+                        <th>Admin</th>
+                      </tr>
                       <tbody>
                         {info.map((val, key) => {
                           return (
@@ -142,23 +173,30 @@ const AdminPage = ({ post, emptyHeading }) => {
                                 <td>{val.user_email}</td>
                                 <td>{val.user_age}</td>
                                 <td>{val.admin} </td>
-                                <td>
-                                  <button
-                                    className='delete-button'
-                                    onClick={() => { deleteUser(val.user_id) }}
-                                  >
-                                    Delete
-                                  </button>
-                                </td>
+                                {/* <button
+                                  className='delete-button'
+                                  onClick={() => { deleteUser(val.user_id) }}
+                                >
+                                  Delete
+                                </button> */}
+                                <button
+                                  className='delete-button'
+                                  onClick={openModal}
+                                >
+                                  Delete
+                                </button>
+                                <Modal
+                                  isOpen={modalOpen}
+                                  onClose={closeModal}
+                                />
                               </tr>
                             </>
                           )
                         })}
                       </tbody>
-                    </Table>
+                    </table>
                   </Tab>
                 </Tabs>
-
               </div>
             </section>
           </div>

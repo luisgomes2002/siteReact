@@ -66,7 +66,11 @@ const UserPage = ({ post, emptyHeading }) => {
         <div className='user-info'>
           <img src={Baka}></img>
           <div className='user-info-base'>
-            <Link to={`/update/${id}`}><button>Go Update id={id}</button></Link>
+            <div className='button-edit'>
+              <Link to={`/update/${id}`}>
+                <i className="fa-solid fa-pen-to-square"></i>
+              </Link>
+            </div>
             <p>Name: {name}</p>
             <p>Age: {age ? age : 'Nada informado'}</p>
             <p>Gender: {/*{gender ? gender : 'Nada informado'} */}</p>
@@ -83,7 +87,7 @@ const UserPage = ({ post, emptyHeading }) => {
           <div className='posts-area'>
             <section>
               <div className='posts-container'>
-                <Scrollbars style={{ height: 700 }}>
+                <Scrollbars style={{ height: 640 }}>
                   <Loop />
                 </Scrollbars>
               </div>

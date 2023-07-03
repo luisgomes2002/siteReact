@@ -44,21 +44,42 @@ app.post('/register', (req, res) => {
   const email = req.body.email
   const password = req.body.password
 
-  bcrypt.hash(password, saltRounds, (err, hash) => {
-    if (err) {
-      console.log(err)
-    }
-
-    db.query(
-      'INSERT INTO users (user_name, user_email, user_password) VALUES (?,?,?)',
-      [name, email, hash],
-      (err, result) => {
-        console.log(err)
+  db.query('SELECT * FROM users WHERE user_email = ?',
+    [email],
+    (err, result) => {
+      if (err) {
+        res.send({ err: err })
+        return
       }
-    )
-  })
-})
 
+      if (result.length > 0) {
+        res.send({ error: 'Email já existe' })
+        return
+      }
+
+      bcrypt.hash(password, saltRounds, (err, hash) => {
+        if (err) {
+          console.log(err)
+          res.send({ err: err })
+          return
+        }
+
+        db.query(
+          'INSERT INTO users (user_name, user_email, user_password) VALUES (?,?,?)',
+          [name, email, hash],
+          (err, result) => {
+            if (err) {
+              console.log(err)
+              res.send({ err: err })
+              return
+            }
+            console.log(result)
+            res.send({ success: 'Conta criada com sucesso' })
+          }
+        )
+      })
+    })
+})
 app.get('/login', (req, res) => {
   if (req.session.user) {
     res.send({ loggedIn: true, user: req.session.user })

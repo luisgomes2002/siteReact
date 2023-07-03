@@ -30,7 +30,7 @@ function Info() {
       <div className='main-container'>
         <div className='main-content'>
           <h1>Um pouco sobre</h1>
-          <p>Na seção abaixo não ensinarei somente o basico do Japonês, mas também haverá um guia para aprender o japonês sozinho sem depender de cursos.</p>
+          <p>Na seção abaixo não ensinarei somente o básico do japonês, mas também haverá um guia para estudar sozinho sem depender de cursos.</p>
           <p>Mas se sentir na necessidade de comprar um curso ou tem grana sobrando, mais abaixo deixarei alguns cursos que conheço com um link do criador.</p>
           <p>Só relembrando que esse site não é focado em ensinar o japonês, mas em guiar o estudante. Vamos começar!!!</p>
         </div>
