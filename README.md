@@ -28,6 +28,6 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 <table>
   <tr>
-    <td align="center"><a href=""><img style="border-radius: 50%;" src="" width="100px;" alt=""/><br /><sub><b>Luis Gomes</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/luisgomes2002"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/85139913?s=400&u=dfb331bb748127e09f58bc7031faf0378984203e&v=4" width="100px;" alt="Luis Gomes"/><br /><sub><b>Luis Gomes</b></sub></a><br /></td>
 
 </table>
