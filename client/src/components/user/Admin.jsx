@@ -41,15 +41,16 @@ const AdminPage = ({ post, emptyHeading }) => {
 
   //Modal
   const [modalOpen, setModalOpen] = useState(false)
+  const [selectedUser, setSelectedUser] = useState(null);
 
-  const openModal = () => {
+  const openModal = (user) => {
+    setSelectedUser(user)
     setModalOpen(true)
-  }
+  };
 
   const closeModal = () => {
     setModalOpen(false)
   }
-
 
   useEffect(() => {
     getUsersForTable()
@@ -74,18 +75,18 @@ const AdminPage = ({ post, emptyHeading }) => {
     })
   }
 
-  const deleteUser = (id) => {
-    axios.delete(`http://localhost:3001/delete/${id}`).then((response) => {
-      setDeleteInfo(
-        deleteInfo.filter((val) => {
-          return val.user_id !== id
-        })
-      )
-    })
-  }
-
-  const Modal = ({ isOpen, onClose }) => {
+  const Modal = ({ isOpen, onClose, selectedUser }) => {
     if (!isOpen) return null
+
+    const deleteUser = (id) => {
+      axios.delete(`http://localhost:3001/delete/${id}`).then((response) => {
+        setDeleteInfo(
+          deleteInfo.filter((val) => {
+            return val.user_id !== id
+          })
+        )
+      })
+    }
 
     return (
       <div className='modal-delete'>
@@ -93,11 +94,19 @@ const AdminPage = ({ post, emptyHeading }) => {
           <button className='close-button-delete' onClick={onClose}>
             <i class="fa-solid fa-xmark"></i>
           </button>
-          {/* <h2>Excluir Conta "{val.user_name}"</h2> */}
-          <p>Conteúdo do Modal</p>
+          <h1>Excluir Conta '{selectedUser.user_name}'</h1>
+          <h2>Excluir permanentemente essa conta?</h2>
+          <h3>Infomações:</h3>
+          <p>ID: {selectedUser.user_id}</p>
+          <p>Email: {selectedUser.user_email}</p>
+          <p>Admin: ?</p>
           <button
             className='delete-button'
-          // onClick={() => { deleteUser(val.user_id) }}
+            onClick={() => {
+              deleteUser(selectedUser.user_id)
+              closeModal()
+              window.location.reload()
+            }}
           >
             Delete
           </button>
@@ -166,31 +175,24 @@ const AdminPage = ({ post, emptyHeading }) => {
                       <tbody>
                         {info.map((val, key) => {
                           return (
-                            <>
+                            <React.Fragment key={key}>
                               <tr>
                                 <td>{val.user_id}</td>
                                 <td>{val.user_name}</td>
                                 <td>{val.user_email}</td>
                                 <td>{val.user_age}</td>
                                 <td>{val.admin} </td>
-                                {/* <button
-                                  className='delete-button'
-                                  onClick={() => { deleteUser(val.user_id) }}
-                                >
-                                  Delete
-                                </button> */}
                                 <button
                                   className='delete-button'
-                                  onClick={openModal}
+                                  onClick={() => openModal(val)}
                                 >
                                   Delete
                                 </button>
-                                <Modal
-                                  isOpen={modalOpen}
-                                  onClose={closeModal}
-                                />
+                                {modalOpen && selectedUser && selectedUser.user_id === val.user_id && (
+                                  <Modal isOpen={modalOpen} onClose={closeModal} selectedUser={selectedUser} />
+                                )}
                               </tr>
-                            </>
+                            </React.Fragment>
                           )
                         })}
                       </tbody>
