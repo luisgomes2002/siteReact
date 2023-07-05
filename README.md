@@ -1,4 +1,9 @@
-<h1 align="center">Murasaki</h1>
+<h1 align="center">Murasaki 
+
+<h4 align="center"> 
+	🚧  React Select 🚀 Em construção...  🚧
+</h4></h1>
+<br >
 
 <h3 align="center">Descubra um site dedicado a pessoas que desejam aprender japonês, explorar a cultura do Japão e compartilhar suas experiências de estudo!</p>
 
