@@ -34,7 +34,6 @@ const UserPage = ({ post, emptyHeading }) => {
 
   useEffect(() => {
     getUsers()
-
   }, [])
 
   const getUsers = () => {
