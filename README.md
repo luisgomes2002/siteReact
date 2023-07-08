@@ -1,12 +1,21 @@
-<h1 align="center">Murasaki</h1>
+<h1 align="center">Murasaki 
 
-<p align="center">Site para pessoas que querem aprender japonês, sobre o Japão ou compartilhar suas experiências de estudo!!</p>
+<h4 align="center"> 
+	🚧  React Select 🚀 Em construção...  🚧
+</h4></h1>
+<br >
+
+<h3 align="center">Descubra um site dedicado a pessoas que desejam aprender japonês, explorar a cultura do Japão e compartilhar suas experiências de estudo!</p>
 
 ![image](https://github.com/luisgomes2002/siteReact/assets/85139913/71b208ad-3da4-454a-ac56-cb42e27c7942)
 
-<p align="center">Podendo escolher a sua área de interesse sobre o Japão!!</p>
+<h3 align="center">Você pode escolher sua área de interesse específica sobre o Japão! Explore o idioma japonês, mergulhe na cultura e compartilhe suas experiências de estudo em sua área preferida.</p>
 
-![image](https://github.com/luisgomes2002/siteReact/assets/85139913/e886a6d6-93cd-4a16-aded-749de8b8af90)
+![image](https://github.com/luisgomes2002/siteReact/assets/85139913/a780358b-4227-4b2e-91d6-64a1782e0b68)
+
+<h3 align="center">Oferecemos a criação de contas para pessoas interessadas em compartilhar dicas e conhecimentos sobre o estudo de línguas estrangeiras.</p>
+
+![Login](https://github.com/luisgomes2002/siteReact/assets/85139913/c821d68d-7797-4161-943e-f55cab65aab9)
 
 ### Features
 
@@ -18,9 +27,10 @@
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
+- [React](https://pt-br.reactjs.org/) 
+- [Bootstrap](https://react-bootstrap.github.io/)
 - [Express](https://expressjs.com/pt-br/)
 - [Node.js](https://nodejs.org/en/)
-- [React](https://pt-br.reactjs.org/)
 - [MySQL](https://www.mysql.com/)
 
 ### Autor
