@@ -23,6 +23,12 @@ function Footer() {
             </div>
             <p className='website-rights'>© 2023. Murasaki</p>
           </div>
+          <div className='creditos'>
+            <p>
+              <Link to='/creditsPage'>Créditos das imagens ・</Link>
+              <Link to='/portfolio'> Murasaki Products</Link>
+            </p>
+          </div>
         </section>
       </div>
     </footer>

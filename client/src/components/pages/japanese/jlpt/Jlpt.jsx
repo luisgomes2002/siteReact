@@ -23,15 +23,11 @@ function JlptHome() {
         <div className='config-text'>
           <h1 className='jlpt-logo'>JLPT</h1>
           <div className='jlpt-home'>
-            <h3>O JLPT (Avaliação de Proficiência na Língua Japonesa ou 日本語能力試験)
-              é uma uma prova de japonês que tem 5 níveis diferentes, atigamente essa prova tinha 4 níveis,
-              mas em alguns anos atrás foi adicionado um quinto nível. Esse exame começa no N5 até o N1 mas cada pessoa pode escolher
-              qual o nível que deseja fazer. A prova do JLPT é feita 1 ou 2 vezes por ano dependendo da região que é feita.
-              Se você é uma pessoa com o interesse de trabalhar no Japão, tenha em mente que a maioria dos trabalhos precisará no mínimo do N2 e geralmente
-              trabalhos que envolve falar bastante com pessoas requer o N1. Nesse link você pode encontrar mais informações
-              sobre <Link to='/trabalho' target='_blank'>TRABALHO NO JAPÃO.</Link> Mas prender japonês não é fácil, é uma tarefa
-              muito árdua e requer bastante esforço, e para se tornar fluente demora muito tempo. Olhe esse vídeo e tenha uma ideia de quanto
-              tempo as pessoas demoraram para chegar no N1.</h3>
+            <h3>O JLPT (Teste de Proficiência em Língua Japonesa ou 日本語能力試験) é uma avaliação de proficiência em japonês que consiste em cinco níveis diferentes. Anteriormente, a prova era composta por quatro níveis, mas um quinto nível foi adicionado alguns anos atrás. Os níveis do JLPT vão do N5 ao N1, permitindo que cada pessoa escolha o nível que deseja realizar. O exame do JLPT é realizado uma ou duas vezes por ano, dependendo da região.
+
+              Se você tem interesse em trabalhar no Japão, é importante ter em mente que a maioria das oportunidades de trabalho exigirá, no mínimo, o N2. Para posições que envolvam comunicação intensiva com pessoas, o nível N1 é geralmente necessário. Para mais informações sobre trabalho no Japão, você pode consultar <Link to='/trabalho' target='_blank'>este link</Link>.
+
+              No entanto, aprender japonês não é uma tarefa fácil, é um desafio árduo que requer muito esforço. Leva muito tempo para alcançar fluência. Neste vídeo, você pode ter uma ideia de quanto tempo as pessoas levaram para alcançar o nível N1.</h3>
             <iframe width="559" height="310" src="https://www.youtube.com/embed/VBQSbKnuXQ4"
               title="How did you pass JLPT N1?" frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -46,28 +42,18 @@ function JlptHome() {
                 <p className='p-center'>(imagem: Pixabay)</p>
               </div>
               <div className='m-1'>
-                <h3>A prova é dividida em 5 níves de proficiência sendo o mais baixo o N5 e o mais alto o N1,
-                  para pessoas interessadas em aprender o japonês para visitar o japão, com um N5 ou N4 já
-                  consegue ter uma experiências mais confortável como ir ao restaurante, fazer check in no hotel e outras
-                  coisas simples. Mas se estiver esperando conversar com nativos, ou ter entender a cultura japonesa
-                  mais profundamente, no mínimo ter um nível equivalente ao N3. Qualquer pessoa com o N3 já pode ser considerado
-                  um bom falente de japonês, e alguns professores acham que essas pessoas são aptas para ensinar o japonês por
-                  já ter uma boa base da língua.</h3>
+                <h3>A prova é dividida em cinco níveis de proficiência, sendo o N5 o mais básico e o N1 o mais avançado. Para aqueles interessados em aprender japonês para visitar o Japão, ter um nível N5 ou N4 já proporciona uma experiência mais confortável, permitindo realizar atividades simples, como ir a restaurantes, fazer check-in em hotéis e outras tarefas cotidianas. No entanto, se o objetivo for ter conversações com nativos ou compreender a cultura japonesa em um nível mais profundo, é recomendado ter, pelo menos, um nível equivalente ao N3.
+
+                  Considera-se que qualquer pessoa com o nível N3 já seja um bom falante de japonês, e alguns professores acreditam que esses indivíduos estão aptos a ensinar o idioma, uma vez que possuem uma sólida base na língua.</h3>
               </div>
             </div>
             <div className='jlpt-about'>
-              <h3 className='mb-5'>Mas talvez você queira ir para trabalhar, se esse for o caso então é bom saber que a maioria das empresas
-                pedem no mínimo o N2 comprovado, com exceção de algumas empresas de TI que as vezes só pedem o bom nível de
-                inglês. Mas vamos falar a real, se você esta querendo construir uma vida em outro país, o mínimo é aprender
-                a língua para o seu próprio bem, seja em resolver as questões burocráticas ou comprar um comida no konbini
-                sem depender de ninguém.
+              <h3 className='mb-5'>No entanto, se o seu objetivo é trabalhar no Japão, é importante saber que a maioria das empresas exige um nível mínimo comprovado de N2, exceto algumas empresas de TI que, às vezes, priorizam um bom domínio da língua inglesa. No entanto, vamos ser realistas: se você deseja construir uma vida em outro país, é essencial aprender o idioma por seu próprio benefício. Isso facilitará a resolução de questões burocráticas e permitirá que você compre alimentos em uma loja de conveniência (konbini) sem depender de ninguém.
               </h3>
               <h1>Pontuação</h1>
-              <h3>O sistema de pontuação do JLPT é feito da seguinte forma, a pontuação geral é a mesma para todos
-                os níveis, vai de 0 até 180 pontos, o que muda é nota de corte e o pontos a quantidade de pontos ganhos
-                em cada área.
+              <h3>O sistema de pontuação do JLPT funciona da seguinte maneira: a pontuação geral varia de 0 a 180 pontos para todos os níveis. O que difere é a nota de corte e a distribuição de pontos em cada área.
               </h3>
-              <h3>Nessa tabela tem algumas informações básicas de cada nível da prova:</h3>
+              <h3>A tabela a seguir apresenta informações fundamentais sobre cada nível da prova:</h3>
             </div>
           </div>
           <div className='table-jlpt'>
@@ -143,18 +129,13 @@ function JlptHome() {
             </div>
             <h3>Infomações mais detalhada neste site
               <Link to='https://fjsp.org.br/wp-content/uploads/2011/04/jlpt_panfleto_pt.pdf'> Página 11 P5</Link></h3>
-            <h3>Todos que prestarem o exame receberão o comunicado de aprovação ou reprovação entre um ou
-              dois meses depois da realização da prova. Para aqueles que passarem na prova vão receber um certificado em suas casas.
-              Esse certificado pode demorar mais de um mês para ser entregue.
+            <h3>Todos os participantes do exame receberão o comunicado de aprovação ou reprovação em um prazo de um a dois meses após a realização da prova. Aqueles que forem aprovados receberão um certificado diretamente em suas residências. É importante ressaltar que a entrega do certificado pode levar mais de um mês.
             </h3>
           </div>
           <div>
             <div className='jlptlist-content'>
               <h1>Valores e localizações</h1>
-              <h3> A prova do JPLT é realizada no mundo inteiro, sendo a Ásia o local com o maior número de locais de aplicação e em cada país tem o seu
-                preço para fazer a inscrição da prova. Olhando nesse <Link to='https://www.jlpt.jp/e/application/overseas_list.html'
-                  target='_blank'>SITE</Link>, poderá encontrar o local de realização da prova.
-              </h3>
+              <h3>O exame do JPLT é realizado em todo o mundo, com a Ásia sendo o continente que conta com o maior número de locais de aplicação. Em cada país, há um preço específico para a inscrição no exame. Para consultar a lista de locais de realização da prova, você pode acessar o seguinte link <Link to='https://www.jlpt.jp/e/application/overseas_list.html' target='_blank'>SITE</Link></h3>
             </div>
             <div className='grid-card '>
               <div className='tabs-config m-3' >
@@ -170,9 +151,7 @@ function JlptHome() {
               </div>
               <div className='tabs-config'>
                 <h2>Localidades</h2>
-                <p>No Brasil essas são as únicas cidades que
-                  a prova é realizada, e algumas delas são feitas 1 vez por ano
-                  e outras 2 vezes.</p>
+                <p>No Brasil, a prova do JPLT é realizada em um número limitado de cidades. Algumas dessas cidades oferecem a prova uma vez por ano, enquanto outras a disponibilizam duas vezes ao longo do ano.</p>
                 <p></p>
                 <li>
                   São Paulo /
@@ -197,7 +176,7 @@ function JlptHome() {
             </div>
             <div className="jlptlist-content">
               <h1>Vídeos</h1>
-              <h3>Entenda um pouco mais sobre o JLPT assistindo os vídeos abaixo.</h3>
+              <h3>Amplie seu conhecimento sobre o JLPT assistindo aos vídeos abaixo.</h3>
             </div>
           </div>
         </div>

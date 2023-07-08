@@ -3,8 +3,8 @@ import NavBar from '../nav/Nav';
 import './HomePage.css'
 import './Services.css'
 import './About.css'
-import { Link } from "react-router-dom";
-import Card from 'react-bootstrap/Card';
+import './Novidades.css'
+import { Link } from 'react-router-dom';
 
 function Home() {
   return (
@@ -82,38 +82,51 @@ function About() {
     <div className='text'>
       <h1>SOBRE</h1>
       <div className='about-box'>
-        <Card style={{ width: '18rem' }} className='m-3'>
-          <Card.Img variant="top" src="holder.js/100px180" />
-          <Card.Body>
-            <Card.Title>Card Title</Card.Title>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </Card.Text>
-          </Card.Body>
-        </Card>
-        <Card style={{ width: '18rem' }} className='m-3'>
-          <Card.Img variant="top" src="holder.js/100px180" />
-          <Card.Body>
-            <Card.Title>Card Title</Card.Title>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </Card.Text>
-          </Card.Body>
-        </Card>
-        <Card style={{ width: '18rem' }} className='m-3'>
-          <Card.Img variant="top" src="holder.js/100px180" />
-          <Card.Body>
-            <Card.Title>Card Title</Card.Title>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </Card.Text>
-          </Card.Body>
-        </Card>
+        <img />
+        <div>
+          <p className='card-title'>Sobre Murasaki</p>
+          <p className='card-text'>
+            Olá! Seja bem-vindo ao MURASAKI,
+            o site definitivo para todos aqueles que desejam embarcar na emocionante jornada de aprender japonês. Sou Luis Gomes, o criador deste projeto apaixonante,
+            e estou entusiasmado em compartilhar com você tudo o que o MURASAKI tem a oferecer.
+            Junte-se a nós no MURASAKI e comece sua jornada de aprendizado do japonês hoje mesmo.
+            Vamos explorar juntos as maravilhas deste idioma único e desbloquear um mundo de oportunidades!
+          </p>
+          <p className='card-text'>Luis Gomes</p>
+          <p className='card-text'>Fundador da MURASAKI</p>
+        </div>
       </div>
-    </div>
+    </div >
+  )
+}
+
+
+const Novidades = () => {
+  return (
+    <div className='text' style={{ paddingTop: '50px' }}>
+      <h1>Novidades</h1>
+      <div className='info-area'>
+        <div className='info-img'>
+          <div className="text-info">
+            <p>
+              Apresentamos com entusiasmo uma emocionante novidade
+              que estamos desenvolvendo exclusivamente para o site MURASAKI!
+              Agora, os alunos terão a oportunidade de compartilhar suas dúvidas e
+              conhecimentos no estudo de línguas estrangeiras como nunca antes.
+              Sabemos o quão crucial é para os alunos de línguas estrangeiras ter um
+              espaço onde possam esclarecer suas dúvidas e, ao mesmo tempo,
+              contribuir com seu próprio conhecimento para ajudar os outros.
+              Com essa nova funcionalidade, queremos criar uma comunidade vibrante e
+              interativa, onde todos possam se conectar e aprender juntos.
+            </p>
+            <p className='come-soon'>EM BREVE</p>
+          </div>
+          <div className='text-img'>
+            <p>COMPARTILHE</p>
+          </div>
+        </div>
+      </div>
+    </div >
   )
 }
 
@@ -123,6 +136,7 @@ function HomePage() {
       <Home />
       <Services />
       <About />
+      <Novidades />
     </>
   )
 }

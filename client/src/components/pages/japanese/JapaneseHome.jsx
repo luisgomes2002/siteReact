@@ -30,9 +30,9 @@ function Info() {
       <div className='main-container'>
         <div className='main-content'>
           <h1>Um pouco sobre</h1>
-          <p>Na seção abaixo não ensinarei somente o básico do japonês, mas também haverá um guia para estudar sozinho sem depender de cursos.</p>
-          <p>Mas se sentir na necessidade de comprar um curso ou tem grana sobrando, mais abaixo deixarei alguns cursos que conheço com um link do criador.</p>
-          <p>Só relembrando que esse site não é focado em ensinar o japonês, mas em guiar o estudante. Vamos começar!!!</p>
+          <p>Na seção a seguir, você encontrará não apenas o básico do japonês, mas também um guia completo para estudar de forma independente, sem depender de cursos.</p>
+          <p>Porém, caso você sinta a necessidade de adquirir um curso ou tenha recursos disponíveis, mais adiante compartilharei alguns cursos que conheço, juntamente com os respectivos links do criador.</p>
+          <p>Apenas para relembrar, este site não tem como objetivo principal ensinar o japonês, mas sim orientar o estudante. Vamos começar!</p>
         </div>
       </div>
     </div>
@@ -48,37 +48,17 @@ function TabsJlpt() {
           <Link to='/jlpt' className='box-items'>
             <h1>JLPT</h1>
           </Link>
-          <Link to='/jlpt' className='box-items' >
+          <Link to='/learner' className='box-items2' >
             <h1>JAPONÊS</h1>
           </Link>
-          <Link to='/jlpt' className='box-items' >
+          <Link to='/jlpt' className='box-items3' >
             <h1>DICAS</h1>
           </Link>
-          <Link to='/jlpt' className='box-items' >
+          <Link to='/jlpt' className='box-items4' >
             <h1>CURSOS</h1>
           </Link>
         </div >
       </div >
-      {/* <div className='tabs'>
-        <div className='tabs-wrap'>
-          <p to='/jlpt' className='box-text' >
-            Entenda um pouco mais sobre o JLPT, onde fazer a prova,
-            como e quanto o valor de incrição de cada nível.
-          </p>
-          <p to='/jlpt' className='box-text' >
-            Essa seção é um guia dos assutos do N5 até o N1 com explicações
-            do tema e um vídeo para complementar o aprendizado.
-          </p>
-          <p to='/jlpt' className='box-text' >
-            Aqui você encontrar dicas como extensões do navegador, apps e sites para facilitar
-            e impulsionar seus estudos.
-          </p>
-          <p to='/jlpt' className='box-text' >
-            Quer uma ajuda nos estudos, encontrar materiais de japonês com mais facilidade e tem
-            uma grana sobrando? então clique aqui.
-          </p>
-        </div >
-      </div > */}
     </div >
   )
 }

@@ -75,41 +75,58 @@
   background-image: url('../../../assets/JLPT/jlptN1.jpg');
 }
 
+.box-items2 {
+  margin: 10px;
+  height: 200px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #2e2c2c;
+  background-size: cover;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  background-image: url('../../../assets/JLPT/livros.jpg');
+}
+
+.box-items3 {
+  margin: 10px;
+  height: 200px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #2e2c2c;
+  background-size: cover;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.box-items4 {
+  margin: 10px;
+  height: 200px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #2e2c2c;
+  background-size: cover;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
 .tabs-wrapper h1 {
   font-size: 30px;
   color: #fff;
   background-color: #00000042;
   height: 70px;
   padding-top: 15px;
-}
-
-.box-items:hover {
-  color: #2e2c2c;
-}
-
-.tabs {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 50px;
-}
-
-.tabs-wrap {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-}
-
-.box-text {
-  margin: 10px;
-  width: 350px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: #000;
-  background-size: cover;
-  font-size: 1.1rem;
 }
 
 @media screen and (max-width: 1400px) {

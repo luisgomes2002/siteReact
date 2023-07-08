@@ -26,13 +26,28 @@
   padding-top: 40px;
 }
 
+.social-media--wrap p {
+  color: #fff;
+  padding-top: 14px;
+}
+
 #footer-logo {
   text-decoration: none;
   color: #fff;
   font-size: 30px;
 }
 
-.social-media--wrap p {
+.creditos {
+  text-align: center;
+  padding-top: 20px;
+
+}
+
+.creditos a {
+  text-decoration: none;
   color: #fff;
-  padding-top: 14px;
+}
+
+.creditos a:hover {
+  color: #6f00ff;
 }
