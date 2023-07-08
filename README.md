@@ -11,7 +11,7 @@
 
 <h3 align="center">Você pode escolher sua área de interesse específica sobre o Japão! Explore o idioma japonês, mergulhe na cultura e compartilhe suas experiências de estudo em sua área preferida.</p>
 
-![image](https://github.com/luisgomes2002/siteReact/assets/85139913/e886a6d6-93cd-4a16-aded-749de8b8af90)
+![image](https://github.com/luisgomes2002/siteReact/assets/85139913/a780358b-4227-4b2e-91d6-64a1782e0b68)
 
 <h3 align="center">Oferecemos a criação de contas para pessoas interessadas em compartilhar dicas e conhecimentos sobre o estudo de línguas estrangeiras.</p>
 
