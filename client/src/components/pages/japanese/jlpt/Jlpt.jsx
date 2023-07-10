@@ -23,10 +23,8 @@ function JlptHome() {
         <div className='config-text'>
           <h1 className='jlpt-logo'>JLPT</h1>
           <div className='jlpt-home'>
-            <h3>O JLPT (Teste de Proficiência em Língua Japonesa ou 日本語能力試験) é uma avaliação de proficiência em japonês que consiste em cinco níveis diferentes. Anteriormente, a prova era composta por quatro níveis, mas um quinto nível foi adicionado alguns anos atrás. Os níveis do JLPT vão do N5 ao N1, permitindo que cada pessoa escolha o nível que deseja realizar. O exame do JLPT é realizado uma ou duas vezes por ano, dependendo da região.
-
+            <h3 style={{ textAlign: 'left' }}>O JLPT (Teste de Proficiência em Língua Japonesa ou 日本語能力試験) é uma avaliação de proficiência em japonês que consiste em cinco níveis diferentes. Anteriormente, a prova era composta por quatro níveis, mas um quinto nível foi adicionado alguns anos atrás. Os níveis do JLPT vão do N5 ao N1, permitindo que cada pessoa escolha o nível que deseja realizar. O exame do JLPT é realizado uma ou duas vezes por ano, dependendo da região.
               Se você tem interesse em trabalhar no Japão, é importante ter em mente que a maioria das oportunidades de trabalho exigirá, no mínimo, o N2. Para posições que envolvam comunicação intensiva com pessoas, o nível N1 é geralmente necessário. Para mais informações sobre trabalho no Japão, você pode consultar <Link to='/trabalho' target='_blank'>este link</Link>.
-
               No entanto, aprender japonês não é uma tarefa fácil, é um desafio árduo que requer muito esforço. Leva muito tempo para alcançar fluência. Neste vídeo, você pode ter uma ideia de quanto tempo as pessoas levaram para alcançar o nível N1.</h3>
             <iframe width="559" height="310" src="https://www.youtube.com/embed/VBQSbKnuXQ4"
               title="How did you pass JLPT N1?" frameBorder="0"
@@ -41,8 +39,8 @@ function JlptHome() {
                 <img src={japanCulture} alt="" />
                 <p className='p-center'>(imagem: Pixabay)</p>
               </div>
-              <div className='m-1'>
-                <h3>A prova é dividida em cinco níveis de proficiência, sendo o N5 o mais básico e o N1 o mais avançado. Para aqueles interessados em aprender japonês para visitar o Japão, ter um nível N5 ou N4 já proporciona uma experiência mais confortável, permitindo realizar atividades simples, como ir a restaurantes, fazer check-in em hotéis e outras tarefas cotidianas. No entanto, se o objetivo for ter conversações com nativos ou compreender a cultura japonesa em um nível mais profundo, é recomendado ter, pelo menos, um nível equivalente ao N3.
+              <div style={{ padding: '40px' }}>
+                <h3 style={{ textAlign: 'left' }}>A prova é dividida em cinco níveis de proficiência, sendo o N5 o mais básico e o N1 o mais avançado. Para aqueles interessados em aprender japonês para visitar o Japão, ter um nível N5 ou N4 já proporciona uma experiência mais confortável, permitindo realizar atividades simples, como ir a restaurantes, fazer check-in em hotéis e outras tarefas cotidianas. No entanto, se o objetivo for ter conversações com nativos ou compreender a cultura japonesa em um nível mais profundo, é recomendado ter, pelo menos, um nível equivalente ao N3.
 
                   Considera-se que qualquer pessoa com o nível N3 já seja um bom falante de japonês, e alguns professores acreditam que esses indivíduos estão aptos a ensinar o idioma, uma vez que possuem uma sólida base na língua.</h3>
               </div>

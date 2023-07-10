@@ -31,10 +31,16 @@ const UserPage = ({ post, emptyHeading }) => {
   const [age, setAge] = useState('')
   //const [gender, setGender] = useState('')
   const [id, setId] = useState('')
+  const [profileImage, setProfileImage] = useState(null);
 
   useEffect(() => {
     getUsers()
   }, [])
+
+  const handleProfileImageChange = (event) => {
+    const file = event.target.files[0];
+    setProfileImage(URL.createObjectURL(file));
+  };
 
   const getUsers = () => {
     axios.get('http://localhost:3001/login').then((response) => {
@@ -63,7 +69,11 @@ const UserPage = ({ post, emptyHeading }) => {
       </nav>
       <div className='profile-user'>
         <div className='user-info'>
-          <img src={Baka}></img>
+          <div className="user-img">
+            <img src={profileImage ? profileImage : Baka} />
+            <input type="file" id="file" onChange={handleProfileImageChange} />
+            <label htmlFor="file"><i className="fa-solid fa-image"></i></label>
+          </div>
           <div className='user-info-base'>
             <div className='button-edit'>
               <Link to={`/update/${id}`}>

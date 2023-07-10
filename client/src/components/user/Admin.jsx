@@ -34,6 +34,7 @@ const AdminPage = ({ post, emptyHeading }) => {
   const [age, setAge] = useState('')
   //const [gender, setGender] = useState('')
   const [id, setId] = useState('')
+  const [profileImage, setProfileImage] = useState(null);
 
   //client
   const [info, setInfo] = useState([])
@@ -56,6 +57,11 @@ const AdminPage = ({ post, emptyHeading }) => {
     getUsersForTable()
     getUsers()
   }, [])
+
+  const handleProfileImageChange = (event) => {
+    const file = event.target.files[0];
+    setProfileImage(URL.createObjectURL(file));
+  };
 
   const getUsers = () => {
     axios.get('http://localhost:3001/login').then((response) => {
@@ -91,15 +97,17 @@ const AdminPage = ({ post, emptyHeading }) => {
     return (
       <div className='modal-delete'>
         <div className='modal-content-delete'>
-          <button className='close-button-delete' onClick={onClose}>
-            <i class="fa-solid fa-xmark"></i>
-          </button>
           <h1>Excluir Conta '{selectedUser.user_name}'</h1>
-          <h2>Excluir permanentemente essa conta?</h2>
-          <h3>Infomações:</h3>
-          <p>ID: {selectedUser.user_id}</p>
-          <p>Email: {selectedUser.user_email}</p>
-          <p>Admin: ?</p>
+          <hr />
+          <div className="grid-delete-user">
+            <img src={profileImage ? profileImage : Baka} />
+            <div className='info-modal-user'>
+              <p>ID: {selectedUser.user_id}</p>
+              <p>Email: {selectedUser.user_email}</p>
+              <p>Admin: ?</p>
+            </div>
+          </div>
+          <hr />
           <button
             className='delete-button'
             onClick={() => {
@@ -109,6 +117,14 @@ const AdminPage = ({ post, emptyHeading }) => {
             }}
           >
             Delete
+          </button>
+          <button
+            className='cancelar-button'
+            onClick={() => {
+              closeModal()
+            }}
+          >
+            Cancelar
           </button>
         </div>
       </div>
@@ -130,7 +146,11 @@ const AdminPage = ({ post, emptyHeading }) => {
       </nav>
       <div className='profile-user'>
         <div className='user-info'>
-          <img src={Baka}></img>
+          <div className="user-img">
+            <img src={profileImage ? profileImage : Baka} />
+            <input type="file" id="file" onChange={handleProfileImageChange} />
+            <label htmlFor="file"><i className="fa-solid fa-image"></i></label>
+          </div>
           <div className='user-info-base'>
             <div className='button-edit'>
               <Link to={`/update/${id}`}>
@@ -182,7 +202,7 @@ const AdminPage = ({ post, emptyHeading }) => {
                                 <td>{val.user_email}</td>
                                 <td>{val.user_age}</td>
                                 <td>{val.admin} </td>
-                                <button
+                                <button style={{ marginTop: '7%' }}
                                   className='delete-button'
                                   onClick={() => openModal(val)}
                                 >

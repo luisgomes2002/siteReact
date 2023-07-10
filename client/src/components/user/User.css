@@ -8,7 +8,17 @@
   border-right: solid 1px #5757572d;
 }
 
-.user-info img {
+.user-info {
+  position: relative;
+  display: inline-block;
+}
+
+.user-img {
+  height: 60%;
+  width: 100%;
+}
+
+.user-img img {
   border-radius: 50%;
   height: 350px;
   width: 350px;
@@ -16,15 +26,40 @@
   margin: 15% 0 15% 20%;
 }
 
+.user-img input[type="file"] {
+  display: none;
+}
+
+.user-img label {
+  position: absolute;
+  top: 27%;
+  left: 47%;
+  padding: 10px 20px;
+  background-color: #00000046;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.user-img img {
+  position: relative;
+}
+
+.user-img:hover label {
+  opacity: 1;
+}
+
+.user-post {
+  background-color: rgb(255, 255, 255);
+}
+
 .user-info-base p {
   color: #000000;
   font-size: 20px;
   margin-left: 100px;
   padding: 10px;
-}
-
-.user-post {
-  background-color: rgb(255, 255, 255);
 }
 
 .user-info-num {
@@ -140,7 +175,19 @@
   border-radius: 15px;
   color: #fff;
   font-size: 15px;
-  margin-top: 7%;
+}
+
+.cancelar-button {
+  width: 100px;
+  height: 40px;
+  background-color: rgb(255, 255, 255);
+  text-decoration: none;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 15px;
+  color: #000000;
+  font-size: 15px;
+  margin-left: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.116);
 }
 
 .button-edit {
@@ -193,17 +240,9 @@ td {
 .modal-content-delete {
   background-color: white;
   padding: 20px;
-  width: 50%;
-  height: 50%;
-}
-
-.close-button-delete {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  border: none;
-  background-color: transparent;
-  color: #fff;
+  width: 30%;
+  height: 30%;
+  border-radius: 25px;
 }
 
 .close-button-delete i {
@@ -212,23 +251,39 @@ td {
 
 .modal-content-delete h1 {
   color: black;
+  font-size: 20px;
 }
 
 .modal-content-delete h2 {
-  padding-top: 20px;
+  padding-top: 10px;
+  font-size: 15px;
+}
+
+.info-modal-user {
+  margin-top: 3%;
 }
 
 .modal-content-delete h3 {
-  padding-top: 15px;
-  padding: 0 20%;
+  padding-top: 7px;
   display: flex;
   align-content: left;
   justify-content: left;
 }
 
 .modal-content-delete p {
-  padding: 0 20%;
   display: flex;
   align-content: left;
   justify-content: left;
+}
+
+.grid-delete-user {
+  display: grid;
+  grid-template-columns: 30% 1fr;
+}
+
+.grid-delete-user img {
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+  margin: 20px 40px;
 }
